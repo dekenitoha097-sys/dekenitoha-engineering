@@ -1,0 +1,206 @@
+/* ============================================================
+   SKILLS PAGE — DETAILED
+   ============================================================ */
+
+/* --- Hero --- */
+.sp-hero {
+  padding: 10rem 0 4rem;
+  text-align: center;
+}
+
+.sp-hero-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.sp-hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-main, #fff);
+  margin-bottom: 1.25rem;
+}
+
+.sp-hero-highlight {
+  background: linear-gradient(135deg, var(--accent, #0070f3), #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sp-hero-intro {
+  color: var(--text-muted, #888);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* --- Filter Tabs --- */
+.sp-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.sp-filter-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+  color: var(--text-muted, #888);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sp-filter-btn:hover {
+  background: var(--glass-hover, rgba(255, 255, 255, 0.08));
+  color: var(--text-main, #fff);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+.sp-filter-btn.active {
+  background: var(--accent, #0070f3);
+  color: #fff;
+  border-color: var(--accent, #0070f3);
+  box-shadow: 0 4px 16px rgba(0, 112, 243, 0.3);
+}
+
+/* --- Categories --- */
+.sp-categories {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.sp-category {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sp-category-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main, #fff);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  letter-spacing: -0.01em;
+}
+
+/* --- Skills List --- */
+.sp-skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* --- Skill Card --- */
+.sp-skill-card {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: 18px;
+  padding: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sp-skill-card:hover {
+  background: var(--glass-hover, rgba(255, 255, 255, 0.06));
+  border-color: rgba(96, 165, 250, 0.25);
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 32px -8px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(96, 165, 250, 0.1);
+}
+
+/* --- Top row: icon + name + level --- */
+.sp-skill-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.sp-skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(96, 165, 250, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sp-skill-card:hover .sp-skill-icon {
+  background: rgba(96, 165, 250, 0.15);
+  box-shadow: 0 0 16px rgba(96, 165, 250, 0.2);
+}
+
+.sp-skill-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.sp-skill-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main, #fff);
+  letter-spacing: -0.01em;
+}
+
+.sp-skill-level {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid;
+  background: rgba(255, 255, 255, 0.02);
+  width: fit-content;
+}
+
+/* --- Description --- */
+.sp-skill-desc {
+  color: var(--text-muted, #888);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .sp-hero {
+    padding: 8rem 0 3rem;
+  }
+
+  .sp-skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-categories {
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+}

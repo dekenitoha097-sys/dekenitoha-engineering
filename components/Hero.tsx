@@ -15,9 +15,9 @@ interface SocialItem {
 }
 
 const SOCIAL_LINKS: ReadonlyArray<SocialItem> = [
-  { nameKey: "social.github", href: "https://github.com", isExternal: true, icon: <Github size={18} /> },
-  { nameKey: "social.linkedin", href: "https://linkedin.com", isExternal: true, icon: <Linkedin size={18} /> },
-  { nameKey: "social.email", href: "mailto:contact@example.com", isExternal: true, icon: <Mail size={18} /> },
+  { nameKey: "social.github", href: "https://github.com/dekenitoha097-sys", isExternal: true, icon: <Github size={18} /> },
+  { nameKey: "social.linkedin", href: "https://www.linkedin.com/in/toha-dekeni-9b0599356/", isExternal: true, icon: <Linkedin size={18} /> },
+  { nameKey: "social.email", href: "mailto:dekenitoha097@gmail.com", isExternal: true, icon: <Mail size={18} /> },
   { nameKey: "social.cv", href: "#cv", icon: <FileText size={18} /> },
 ];
 
