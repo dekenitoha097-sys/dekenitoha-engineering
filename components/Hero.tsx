@@ -41,7 +41,7 @@ export default function Hero() {
           <span className="social-label" id="social-label">{t("hero.socialLabel")}</span>
           <ul className="social-list" aria-labelledby="social-label">
             {SOCIAL_LINKS.map(({ nameKey, href, isExternal, icon }) => (
-              <li key={nameKey}>
+              <li key={nameKey as string}>
                 <a
                   href={href}
                   className="social-link"
@@ -85,7 +85,7 @@ export default function Hero() {
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg", alt: "C++" },
           ].map((tech, i) => (
             <div
-              key={tech.alt}
+              key={tech.alt as string}
               className="orbit-icon"
               style={{ "--i": i, "--total": 8 } as React.CSSProperties}
             >

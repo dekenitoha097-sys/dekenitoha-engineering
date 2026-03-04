@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 import SectionIndicator from "@/components/SectionIndicator";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <About />
         <Education />
         <Skills />
+        <Projects />
         <SectionIndicator />
       </div>
     </main>

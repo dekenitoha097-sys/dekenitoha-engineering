@@ -31,7 +31,7 @@ const about = {
     "aboutPage.hero.titleHighlight": "& Passionné d'IA",
     "aboutPage.hero.bio":
       "Je m'appelle DEKENI Toha, étudiant en 2ème année d'Informatique et Intelligence Artificielle. Je conçois des expériences web modernes, performantes et accessibles. Mon objectif : transformer chaque idée en un produit digital qui fait la différence.",
-    "aboutPage.hero.location": "Basé à Lomé, Togo",
+    "aboutPage.hero.location": "Basé à Casablanca, Maroc",
     "aboutPage.hero.status": "Disponible pour freelance",
 
     // Timeline
@@ -95,7 +95,7 @@ const about = {
     "aboutPage.hero.titleHighlight": "& AI Enthusiast",
     "aboutPage.hero.bio":
       "I'm DEKENI Toha, a 2nd year Computer Science & AI student. I build modern, high-performance, and accessible web experiences. My goal: turn every idea into a digital product that makes a difference.",
-    "aboutPage.hero.location": "Based in Lomé, Togo",
+    "aboutPage.hero.location": "Based in Casablanca, Morocco",
     "aboutPage.hero.status": "Available for freelance",
 
     // Timeline

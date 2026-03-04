@@ -13,19 +13,19 @@ const education = {
     // --- Section cards (homepage) ---
     "education.card.1.period": "2024 — Présent",
     "education.card.1.degree": "2ème Année — Informatique & Intelligence Artificielle",
-    "education.card.1.school": "Université de Lomé",
+    "education.card.1.school": "Université de Casablanca",
     "education.card.1.desc":
       "Algorithmes avancés, Machine Learning, Développement Web, Bases de données, Réseaux.",
 
     "education.card.2.period": "2023 — 2024",
     "education.card.2.degree": "1ère Année — Sciences Informatiques",
-    "education.card.2.school": "Université de Lomé",
+    "education.card.2.school": "Université de Casablanca",
     "education.card.2.desc":
       "Fondamentaux de la programmation, structures de données, introduction aux réseaux.",
 
     "education.card.3.period": "2022 — 2023",
     "education.card.3.degree": "Baccalauréat Scientifique",
-    "education.card.3.school": "Lycée, Lomé",
+    "education.card.3.school": "Lycée, Casablanca",
     "education.card.3.desc":
       "Mathématiques, Physique-Chimie, Sciences de la Vie et de la Terre. Mention Bien.",
 
@@ -39,8 +39,8 @@ const education = {
     // --- Formation 1 (détaillée) ---
     "educationPage.item.1.period": "2024 — Présent",
     "educationPage.item.1.degree": "2ème Année — Informatique & Intelligence Artificielle",
-    "educationPage.item.1.school": "Université de Lomé",
-    "educationPage.item.1.location": "Lomé, Togo",
+    "educationPage.item.1.school": "Université de Casablanca",
+    "educationPage.item.1.location": "Casablanca, Maroc",
     "educationPage.item.1.description":
       "Formation approfondie en informatique avec spécialisation en intelligence artificielle. Le programme combine théorie solide et projets pratiques.",
     "educationPage.item.1.courses":
@@ -51,8 +51,8 @@ const education = {
     // --- Formation 2 (détaillée) ---
     "educationPage.item.2.period": "2023 — 2024",
     "educationPage.item.2.degree": "1ère Année — Sciences Informatiques",
-    "educationPage.item.2.school": "Université de Lomé",
-    "educationPage.item.2.location": "Lomé, Togo",
+    "educationPage.item.2.school": "Université de Casablanca",
+    "educationPage.item.2.location": "Casablanca, Maroc",
     "educationPage.item.2.description":
       "Première année fondatrice avec acquisition des bases solides en programmation, algorithmique et mathématiques pour l'informatique.",
     "educationPage.item.2.courses":
@@ -63,8 +63,8 @@ const education = {
     // --- Formation 3 (détaillée) ---
     "educationPage.item.3.period": "2022 — 2023",
     "educationPage.item.3.degree": "Baccalauréat Scientifique",
-    "educationPage.item.3.school": "Lycée, Lomé",
-    "educationPage.item.3.location": "Lomé, Togo",
+    "educationPage.item.3.school": "Lycée, Casablanca",
+    "educationPage.item.3.location": "Casablanca, Maroc",
     "educationPage.item.3.description":
       "Obtention du baccalauréat scientifique avec mention, posant les bases mathématiques et logiques nécessaires aux études supérieures en informatique.",
     "educationPage.item.3.courses":
@@ -89,19 +89,19 @@ const education = {
     // --- Section cards (homepage) ---
     "education.card.1.period": "2024 — Present",
     "education.card.1.degree": "2nd Year — Computer Science & Artificial Intelligence",
-    "education.card.1.school": "University of Lomé",
+    "education.card.1.school": "University of Casablanca",
     "education.card.1.desc":
       "Advanced algorithms, Machine Learning, Web Development, Databases, Networking.",
 
     "education.card.2.period": "2023 — 2024",
     "education.card.2.degree": "1st Year — Computer Science",
-    "education.card.2.school": "University of Lomé",
+    "education.card.2.school": "University of Casablanca",
     "education.card.2.desc":
       "Programming fundamentals, data structures, introduction to networking.",
 
     "education.card.3.period": "2022 — 2023",
     "education.card.3.degree": "Scientific Baccalaureate",
-    "education.card.3.school": "High School, Lomé",
+    "education.card.3.school": "High School, Casablanca",
     "education.card.3.desc":
       "Mathematics, Physics & Chemistry, Life & Earth Sciences. Honors.",
 
@@ -115,8 +115,8 @@ const education = {
     // --- Formation 1 (détaillée) ---
     "educationPage.item.1.period": "2024 — Present",
     "educationPage.item.1.degree": "2nd Year — Computer Science & Artificial Intelligence",
-    "educationPage.item.1.school": "University of Lomé",
-    "educationPage.item.1.location": "Lomé, Togo",
+    "educationPage.item.1.school": "University of Casablanca",
+    "educationPage.item.1.location": "Casablanca, Morocco",
     "educationPage.item.1.description":
       "In-depth computer science program with specialization in artificial intelligence. The curriculum combines strong theory with practical projects.",
     "educationPage.item.1.courses":
@@ -127,8 +127,8 @@ const education = {
     // --- Formation 2 (détaillée) ---
     "educationPage.item.2.period": "2023 — 2024",
     "educationPage.item.2.degree": "1st Year — Computer Science",
-    "educationPage.item.2.school": "University of Lomé",
-    "educationPage.item.2.location": "Lomé, Togo",
+    "educationPage.item.2.school": "University of Casablanca",
+    "educationPage.item.2.location": "Casablanca, Morocco",
     "educationPage.item.2.description":
       "Foundational first year building strong fundamentals in programming, algorithms, and mathematics for computer science.",
     "educationPage.item.2.courses":
@@ -139,8 +139,8 @@ const education = {
     // --- Formation 3 (détaillée) ---
     "educationPage.item.3.period": "2022 — 2023",
     "educationPage.item.3.degree": "Scientific Baccalaureate",
-    "educationPage.item.3.school": "High School, Lomé",
-    "educationPage.item.3.location": "Lomé, Togo",
+    "educationPage.item.3.school": "High School, Casablanca",
+    "educationPage.item.3.location": "Casablanca, Morocco",
     "educationPage.item.3.description":
       "Obtained the scientific baccalaureate with honors, building the mathematical and logical foundations needed for higher education in computer science.",
     "educationPage.item.3.courses":
