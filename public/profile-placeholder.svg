@@ -1,0 +1,31 @@
+<svg width="620" height="780" viewBox="0 0 620 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="62" y1="24" x2="578" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D2C9A"/>
+      <stop offset="0.55" stop-color="#101C79"/>
+      <stop offset="1" stop-color="#050D45"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(315 138) rotate(90) scale(280 280)">
+      <stop stop-color="#F0F4FF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#F0F4FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="309" y1="250" x2="309" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A357D"/>
+      <stop offset="1" stop-color="#09103E"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="620" height="780" fill="url(#bg)"/>
+  <circle cx="315" cy="140" r="230" fill="url(#light)"/>
+
+  <ellipse cx="312" cy="770" rx="220" ry="74" fill="#040A2E"/>
+  <circle cx="312" cy="255" r="92" fill="#26337B"/>
+  <path d="M86 758C86 550 178 360 310 360C442 360 534 550 534 758H86Z" fill="url(#body)"/>
+  <path d="M140 750C160 590 224 500 310 500C396 500 460 590 480 750H140Z" fill="#0A123F"/>
+  <circle cx="280" cy="240" r="7" fill="#95A2F2" fill-opacity="0.35"/>
+  <circle cx="340" cy="238" r="7" fill="#95A2F2" fill-opacity="0.35"/>
+  <rect x="190" y="130" width="240" height="22" rx="11" fill="#E8EDFF" fill-opacity="0.26"/>
+  <text x="310" y="95" text-anchor="middle" fill="#F5F7FF" font-family="Segoe UI, sans-serif" font-size="28" letter-spacing="1">
+    ADD YOUR PHOTO
+  </text>
+</svg>

@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* --- VARIABLES --- */
+:root {
+  --bg-color: #050505;
+  --bg-gradient: radial-gradient(circle at 50% -20%, #1a1a24 0%, #050505 50%);
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  --accent: #0070f3;
+  --accent-glow: rgba(0, 112, 243, 0.25);
+  --border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-hover: rgba(255, 255, 255, 0.1);
+}
+
+/* --- RESET & BASE --- */
+.portfolio-page {
+  background-image: var(--bg-gradient);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* --- GRILLE DE FOND PRO --- */
+.hero-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- GRILLE COLORÉE DERRIÈRE LA GRILLE BLANCHE --- */
+.hero-shell::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 112, 243, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 112, 243, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --- HEADER --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 0.3rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.45rem 1.2rem;
+  border-radius: 99px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.2px;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link.active {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.cta-pill {
+  background: var(--text-main);
+  color: var(--bg-color);
+  padding: 0.6rem 1.4rem;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* --- HEADER ACTIONS --- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 4rem 0;
+}
+
+/* --- ANIMATIONS D'ENTRÉE (Fade Up) --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content > * {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger (délai en cascade pour un effet fluide) */
+.hero-content .eyebrow { animation-delay: 0.1s; }
+.hero-content .hero-title { animation-delay: 0.2s; }
+.hero-content .hero-description { animation-delay: 0.3s; }
+.hero-content .social-row { animation-delay: 0.4s; }
+.hero-content .hero-actions { animation-delay: 0.5s; }
+
+/* --- TYPOGRAPHIE --- */
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title span:last-child {
+  background: linear-gradient(90deg, #ffffff, #888888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 90%;
+  margin-bottom: 2.5rem;
+}
+
+/* --- RÉSEAUX SOCIAUX (Boutons Premium) --- */
+.social-row {
+  margin-bottom: 2.5rem;
+}
+
+.social-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-link:hover {
+  background: var(--text-main);
+  color: var(--bg-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* --- BOUTONS D'ACTION --- */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.85rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 112, 243, 0.4);
+}
+
+.btn-ghost {
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  background: var(--glass-bg);
+}
+
+.btn-ghost:hover {
+  background: var(--glass-hover);
+  transform: translateY(-2px);
+}
+
+/* --- IMAGE / VISUEL PRO --- */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Wrapper qui contient l'image + l'orbite */
+.orbit-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px; /* TAILLE DE L'IMAGE GARANTIE */
+  aspect-ratio: 4 / 5;
+}
+
+/* Anneau orbital : Fini les tirets, place à une piste lumineuse premium */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px; /* Diamètre parfait pour englober l'image de 420px */
+  height: 600px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: radial-gradient(circle, transparent 60%, rgba(0, 112, 243, 0.03) 100%);
+  box-shadow: 0 0 40px rgba(0, 112, 243, 0.08), inset 0 0 40px rgba(0, 112, 243, 0.08);
+  pointer-events: none;
+  z-index: 1; /* Derrière l'image */
+}
+
+/* Le positionneur invisible qui tourne continuellement */
+.orbit-icon {
+  --radius: 300px; /* Correspond au rayon de 600px de .orbit-ring */
+  --angle: calc((360deg / var(--total)) * var(--i));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  animation: orbitIconSpin 40s linear infinite;
+  z-index: 3; /* Au-dessus de l'anneau et de l'image */
+  pointer-events: auto;
+}
+
+/* L'intérieur de l'icône (Glassmorphism + Hover) */
+.orbit-icon-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 15, 20, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+/* L'image de la technologie en gris transparent par défaut */
+.orbit-icon-inner img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%) opacity(0.5);
+  transition: all 0.4s ease;
+}
+
+/* EFFET DE SURVOL : La magie opère */
+.orbit-icon:hover .orbit-icon-inner {
+  transform: scale(1.3); /* S'agrandit */
+  background: rgba(20, 20, 25, 0.95);
+  border-color: rgba(0, 112, 243, 0.5); /* Bordure bleue pro */
+  box-shadow: 0 10px 30px rgba(0, 112, 243, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.orbit-icon:hover .orbit-icon-inner img {
+  filter: grayscale(0%) opacity(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* Reprend ses couleurs et brille */
+  transform: scale(1.1);
+}
+
+/* Animation propre : rotation combinée à la contre-rotation */
+@keyframes orbitIconSpin {
+  from {
+    transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(-1 * var(--angle) - 360deg));
+  }
+}
+
+/* Portrait — taille INCHANGÉE comme demandé */
+.portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 1px var(--border);
+  animation: float 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+.portrait-image {
+  object-fit: cover;
+  filter: contrast(1.05);
+}
+
+/* BADGE SUR L'IMAGE */
+.status-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.status-badge::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #10b981;
+}
+
+/* --- ANIMATIONS FLOAT --- */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --- SECTION INDICATOR --- */
+.section-indicator {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 50;
+}
+
+.section-indicator li {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.section-indicator li.is-active {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* --- RESPONSIVE GENERAL --- */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .hero-content > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .social-list {
+    justify-content: center;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .section-indicator {
+    display: none;
+  }
+
+  /* On adapte les diamètres sur mobile sans toucher à la structure de l'image */
+  .orbit-wrapper { max-width: 320px; }
+  
+  .orbit-ring {
+    width: 440px; 
+    height: 440px;
+  }
+  
+  .orbit-icon {
+    --radius: 220px;
+    width: 46px;
+    height: 46px;
+    margin: -23px 0 0 -23px;
+  }
+
+  .orbit-icon-inner img {
+    width: 22px;
+    height: 22px;
+  }
+}
