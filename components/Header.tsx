@@ -23,6 +23,7 @@ export default function Header() {
     { label: t("nav.education"), href: "/education" },
     { label: t("nav.skills"), href: "/skills" },
     { label: t("nav.projects"), href: "/projects" },
+    {label:t("nav.certifications"), href: "/certifications"},
     { label: t("nav.blog"), href: "/blog" },
     {label: t("nav.cv"), href: "/cv" },
     { label: t("nav.contact"), href: "/contact" },

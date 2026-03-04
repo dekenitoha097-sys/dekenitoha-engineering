@@ -15,8 +15,8 @@ import "./cv-page.css";
 // 🧑 Infos personnelles
 const personalInfo = {
   photo: "/image.png",
-  github: "github.com/dekenimawuli",
-  linkedin: "linkedin.com/in/dekeni-toha",
+  github: "https://github.com/dekenitoha097-sys/",
+  linkedin: "https://www.linkedin.com/in/toha-dekeni-9b0599356/",
 };
 
 // 💼 Expériences — Ajoute ou supprime des objets dans cette liste
