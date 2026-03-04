@@ -1,0 +1,87 @@
+/* ============================================================
+   ABOUT PAGE - HERO SECTION
+   ============================================================ */
+
+.about-page-hero {
+  padding: 10rem 0 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.about-page-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.about-page-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-main, #fff);
+  margin-bottom: 1.5rem;
+}
+
+.about-page-hero-highlight {
+  background: linear-gradient(135deg, var(--accent, #0070f3), #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-page-hero-bio {
+  color: var(--text-muted, #888);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+/* --- Meta badges --- */
+.about-page-hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.about-page-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  color: var(--text-muted, #888);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page-meta-item:hover {
+  background: var(--glass-hover, rgba(255, 255, 255, 0.08));
+  border-color: rgba(96, 165, 250, 0.25);
+  color: var(--text-main, #fff);
+}
+
+.about-page-meta-item.status {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+.about-page-meta-item.status:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.08);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .about-page-hero {
+    padding: 8rem 0 3rem;
+  }
+}
