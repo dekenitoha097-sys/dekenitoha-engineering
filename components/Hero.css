@@ -1,0 +1,288 @@
+/* --- HERO SECTION --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 4rem 0;
+}
+
+/* --- ANIMATIONS D'ENTRÉE (Fade Up) --- */
+.hero-content > * {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger (délai en cascade pour un effet fluide) */
+.hero-content .eyebrow { animation-delay: 0.1s; }
+.hero-content .hero-title { animation-delay: 0.2s; }
+.hero-content .hero-description { animation-delay: 0.3s; }
+.hero-content .social-row { animation-delay: 0.4s; }
+.hero-content .hero-actions { animation-delay: 0.5s; }
+
+/* --- TYPOGRAPHIE --- */
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title span:last-child {
+  background: linear-gradient(90deg, #ffffff, #888888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 90%;
+  margin-bottom: 2.5rem;
+}
+
+/* --- RÉSEAUX SOCIAUX (Boutons Premium) --- */
+.social-row {
+  margin-bottom: 2.5rem;
+}
+
+.social-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-link:hover {
+  background: var(--text-main);
+  color: var(--bg-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* --- BOUTONS D'ACTION --- */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* --- IMAGE / VISUEL PRO --- */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+/* Wrapper qui contient l'image + l'orbite */
+.orbit-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+}
+
+/* Anneau orbital */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: radial-gradient(circle, transparent 60%, rgba(0, 112, 243, 0.03) 100%);
+  box-shadow: 0 0 40px rgba(0, 112, 243, 0.08), inset 0 0 40px rgba(0, 112, 243, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Le positionneur invisible qui tourne continuellement */
+.orbit-icon {
+  --radius: 300px;
+  --angle: calc((360deg / var(--total)) * var(--i));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  animation: orbitIconSpin 40s linear infinite;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* L'intérieur de l'icône (Glassmorphism + Hover) */
+.orbit-icon-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 15, 20, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.orbit-icon-inner img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%) opacity(0.5);
+  transition: all 0.4s ease;
+}
+
+/* EFFET DE SURVOL */
+.orbit-icon:hover .orbit-icon-inner {
+  transform: scale(1.3);
+  background: rgba(20, 20, 25, 0.95);
+  border-color: rgba(0, 112, 243, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 112, 243, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.orbit-icon:hover .orbit-icon-inner img {
+  filter: grayscale(0%) opacity(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  transform: scale(1.1);
+}
+
+/* Animation propre : rotation combinée à la contre-rotation */
+@keyframes orbitIconSpin {
+  from {
+    transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--radius)) rotate(calc(-1 * var(--angle) - 360deg));
+  }
+}
+
+/* Portrait */
+.portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 1px var(--border);
+  animation: float 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+.portrait-image {
+  object-fit: cover;
+  filter: contrast(1.05);
+}
+
+/* BADGE SUR L'IMAGE */
+.status-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.status-badge::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #10b981;
+}
+
+/* --- Hero Responsive --- */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .hero-content > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .social-list {
+    justify-content: center;
+  }
+
+  .orbit-wrapper { max-width: 320px; }
+
+  .orbit-ring {
+    width: 440px;
+    height: 440px;
+  }
+
+  .orbit-icon {
+    --radius: 220px;
+    width: 46px;
+    height: 46px;
+    margin: -23px 0 0 -23px;
+  }
+
+  .orbit-icon-inner img {
+    width: 22px;
+    height: 22px;
+  }
+}

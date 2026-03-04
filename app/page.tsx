@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
+import SectionIndicator from "@/components/SectionIndicator";
 
 export default function Home() {
   return (
@@ -7,13 +9,8 @@ export default function Home() {
       <div className="hero-shell">
         <Header />
         <Hero />
-
-        <ul className="section-indicator" aria-hidden="true" role="presentation">
-          <li className="is-active">01</li>
-          <li>02</li>
-          <li>03</li>
-          <li>04</li>
-        </ul>
+        <About />
+        <SectionIndicator />
       </div>
     </main>
   );

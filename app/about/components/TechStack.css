@@ -1,0 +1,115 @@
+/* ============================================================
+   TECH STACK COMPONENT
+   ============================================================ */
+
+.techstack-section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.techstack-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.techstack-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.techstack-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-main, #fff);
+}
+
+.techstack-title-highlight {
+  background: linear-gradient(135deg, var(--accent, #0070f3), #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Grid --- */
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* --- Category Card --- */
+.techstack-category {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: 24px;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.techstack-category:hover {
+  background: var(--glass-hover, rgba(255, 255, 255, 0.05));
+  border-color: rgba(96, 165, 250, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(96, 165, 250, 0.1);
+}
+
+.techstack-category-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent, #60a5fa);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Pills --- */
+.techstack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.techstack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-main, #fff);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.techstack-pill:hover {
+  background: rgba(96, 165, 250, 0.12);
+  border-color: rgba(96, 165, 250, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.15);
+}
+
+.techstack-pill-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .techstack-grid {
+    grid-template-columns: 1fr;
+  }
+}

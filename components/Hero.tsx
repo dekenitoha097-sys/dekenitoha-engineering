@@ -1,5 +1,6 @@
 "use client";
 
+import "./Hero.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
@@ -24,7 +25,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="hero" aria-labelledby="hero-heading">
+    <section className="hero" id="hero" aria-labelledby="hero-heading">
       <div className="hero-content">
         <p className="eyebrow" aria-hidden="true">{t("hero.greeting")}</p>
         <h1 id="hero-heading" className="hero-title">
