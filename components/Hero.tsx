@@ -18,7 +18,7 @@ const SOCIAL_LINKS: ReadonlyArray<SocialItem> = [
   { nameKey: "social.github", href: "https://github.com/dekenitoha097-sys", isExternal: true, icon: <Github size={18} /> },
   { nameKey: "social.linkedin", href: "https://www.linkedin.com/in/toha-dekeni-9b0599356/", isExternal: true, icon: <Linkedin size={18} /> },
   { nameKey: "social.email", href: "mailto:dekenitoha097@gmail.com", isExternal: true, icon: <Mail size={18} /> },
-  { nameKey: "social.cv", href: "#cv", icon: <FileText size={18} /> },
+  { nameKey: "social.cv", href: "/cv", icon: <FileText size={18} /> },
 ];
 
 export default function Hero() {
@@ -82,6 +82,7 @@ export default function Hero() {
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg", alt: "Node.js" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", alt: "Git" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", alt: "Python" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg", alt: "C++" },
           ].map((tech, i) => (
             <div
               key={tech.alt}

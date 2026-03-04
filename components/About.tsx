@@ -57,11 +57,11 @@ export default function About({ showSeeMore = true }: { showSeeMore?: boolean })
             </div>
 
             <div className="about-cta-group">
-              <a href="/cv.pdf" className="btn btn-primary about-cta" download>
+              <Link href="/cv" className="btn btn-primary about-cta" >
                 <div className="cta-glow"></div>
                 <FileDown size={18} strokeWidth={2.5} className="relative z-10" />
                 <span className="relative z-10">{t("about.cta")}</span>
-              </a>
+              </Link>
               {showSeeMore && (
                 <Link href="/about" className="btn btn-ghost about-cta-more">
                   {t("about.seeMore")}
