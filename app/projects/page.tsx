@@ -60,6 +60,7 @@ const projectsList: Project[] = [
     year: 2025,
     color: "#0070f3",
     image: "/projects/portfolio.jpg",
+
   },
   {
     id: "ai-classifier",
