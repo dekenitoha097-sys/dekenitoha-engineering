@@ -11,6 +11,7 @@ import education from "./translations/education";
 import projects from "./translations/projects";
 import cv from "./translations/cv";
 import certifications from "./translations/certifications";
+import blog from "./translations/blog";
 
 export const languages = ["fr", "en"] as const;
 export type Locale = (typeof languages)[number];
@@ -25,6 +26,7 @@ const translations = {
     ...projects.fr,
     ...cv.fr,
     ...certifications.fr,
+    ...blog.fr,
   },
   en: {
     ...common.en,
@@ -35,6 +37,7 @@ const translations = {
     ...projects.en,
     ...cv.en,
     ...certifications.en,
+    ...blog.en,
   },
 } as const;
 
