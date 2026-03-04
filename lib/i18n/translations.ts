@@ -7,6 +7,7 @@ import common from "./translations/common";
 import hero from "./translations/hero";
 import about from "./translations/about";
 import skills from "./translations/skills";
+import education from "./translations/education";
 import cv from "./translations/cv";
 
 export const languages = ["fr", "en"] as const;
@@ -18,6 +19,7 @@ const translations = {
     ...hero.fr,
     ...about.fr,
     ...skills.fr,
+    ...education.fr,
     ...cv.fr,
   },
   en: {
@@ -25,6 +27,7 @@ const translations = {
     ...hero.en,
     ...about.en,
     ...skills.en,
+    ...education.en,
     ...cv.en,
   },
 } as const;

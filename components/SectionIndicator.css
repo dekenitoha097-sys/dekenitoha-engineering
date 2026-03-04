@@ -53,8 +53,8 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-muted);
-  opacity: 0;
-  transform: translateX(8px);
+  opacity: 0.15;
+  transform: translateX(0);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   white-space: nowrap;
@@ -67,6 +67,11 @@
 
 .indicator-dot.is-active .indicator-label {
   color: var(--accent);
+  opacity: 0.25;
+}
+
+.indicator-dot.is-active:hover .indicator-label {
+  opacity: 1;
 }
 
 /* Responsive */
