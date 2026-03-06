@@ -1,0 +1,542 @@
+/* ============================================================
+   CONTACT SECTION — Premium Glassmorphism Design
+   ============================================================ */
+
+/* ── Section ── */
+.contact-section {
+  position: relative;
+  padding: 7rem 0 5rem;
+  overflow: hidden;
+}
+
+/* ── Background Glows ── */
+.ct-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  animation: ctGlowFloat 18s ease-in-out infinite;
+}
+
+.ct-glow-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 112, 243, 0.07), transparent 70%);
+  top: -120px;
+  right: -80px;
+}
+
+.ct-glow-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.06), transparent 70%);
+  bottom: -60px;
+  left: -100px;
+  animation-delay: -6s;
+}
+
+.ct-glow-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.05), transparent 70%);
+  top: 40%;
+  left: 50%;
+  animation-delay: -12s;
+}
+
+@keyframes ctGlowFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -30px) scale(1.06); }
+  50% { transform: translate(-15px, 25px) scale(0.94); }
+  75% { transform: translate(25px, 10px) scale(1.03); }
+}
+
+/* ── Container ── */
+.ct-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Header ── */
+.ct-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 4rem;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.ct-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.ct-title-highlight {
+  background: linear-gradient(135deg, var(--accent), #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ct-description {
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+}
+
+/* ── Grid ── */
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: start;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+
+/* ════════════════════════════════════════
+   FORM CARD
+   ════════════════════════════════════════ */
+.ct-form-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 2.5rem;
+  overflow: hidden;
+  transition: border-color 0.5s ease;
+}
+
+.ct-form-card:focus-within {
+  border-color: rgba(0, 112, 243, 0.2);
+}
+
+.ct-form-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(0, 112, 243, 0.03),
+    transparent 60%
+  );
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.ct-form-card:focus-within .ct-form-card-glow {
+  opacity: 1;
+}
+
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Field ── */
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ct-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+.ct-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ct-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.ct-input:focus {
+  border-color: var(--accent);
+  background: rgba(0, 112, 243, 0.04);
+  box-shadow:
+    0 0 0 3px rgba(0, 112, 243, 0.08),
+    0 4px 20px -4px rgba(0, 112, 243, 0.1);
+}
+
+.ct-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ct-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ── Submit Button ── */
+.ct-submit {
+  position: relative;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), #3b82f6);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 4px 20px -4px rgba(0, 112, 243, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.ct-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 30px -4px rgba(0, 112, 243, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.ct-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ct-submit:disabled {
+  cursor: not-allowed;
+}
+
+.ct-submit--loading {
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.6), rgba(59, 130, 246, 0.6));
+}
+
+.ct-submit-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ct-submit-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  animation: ctShine 3s ease-in-out infinite;
+}
+
+@keyframes ctShine {
+  0%, 100% { left: -100%; }
+  50% { left: 100%; }
+}
+
+/* ── Spinner ── */
+.ct-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ctSpin 0.7s linear infinite;
+}
+
+@keyframes ctSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Status ── */
+.ct-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ct-status-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ct-status-title {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ct-status-detail {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  opacity: 0.9;
+}
+
+.ct-status--success {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.ct-status--error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* ════════════════════════════════════════
+   INFO SIDE
+   ════════════════════════════════════════ */
+.ct-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Info Grid ── */
+.ct-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.ct-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ct-info-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.ct-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: rgba(0, 112, 243, 0.08);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.ct-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.ct-info-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.ct-info-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  word-break: break-all;
+}
+
+.ct-info-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ct-info-link:hover {
+  color: var(--accent);
+}
+
+/* ── Social Card ── */
+.ct-social-card {
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+}
+
+.ct-social-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.ct-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ct-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ct-social-link:hover {
+  background: rgba(0, 112, 243, 0.06);
+  border-color: rgba(0, 112, 243, 0.15);
+  transform: translateX(6px);
+}
+
+.ct-social-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: all 0.3s ease;
+  color: var(--accent);
+}
+
+.ct-social-link:hover .ct-social-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── Coffee CTA ── */
+.ct-coffee {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.04), rgba(245, 158, 11, 0.02));
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  border-radius: 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+}
+
+.ct-coffee:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(245, 158, 11, 0.04));
+  border-color: rgba(251, 191, 36, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Contact page hero section */
+.contact-page-extra {
+  width: 100%;
+  padding-top: 5.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.contact-extra-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.contact-extra-hero svg {
+  color: var(--accent, #0070f3);
+  filter: drop-shadow(0 0 12px #0070f3aa);
+}
+.contact-extra-hero h1 {
+  background: linear-gradient(90deg, #0070f3, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.contact-extra-hero p {
+  color: #aaa;
+  font-size: 1.1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .ct-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ct-info-side {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 5rem 0 3rem;
+  }
+
+  .ct-form-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .ct-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-header {
+    margin-bottom: 2.5rem;
+  }
+}

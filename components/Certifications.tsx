@@ -7,10 +7,10 @@ import type { TranslationKey } from "@/lib/i18n/translations";
 import { Award, ArrowRight, ExternalLink } from "lucide-react";
 
 const certsList = [
-  { id: 1, image: "/courcera-certificats/developpement_web.png", link: "https://coursera.org/verify/placeholder-1" },
-  { id: 2, image: "/courcera-certificats/communication.png", link: "https://coursera.org/verify/placeholder-2" },
-  { id: 3, image: "/courcera-certificats/network_and_security.png", link: "https://coursera.org/verify/placeholder-3" },
-  { id: 4, image: "/courcera-certificats/project_management.png", link: "https://coursera.org/verify/placeholder-4" },
+  { id: 1, image: "/courcera-certificats/developpement_web.png", link: "https://www.coursera.org/account/accomplishments/verify/KZYXSW93VCLW" },
+  { id: 2, image: "/courcera-certificats/communication.png", link: "https://www.coursera.org/account/accomplishments/verify/TXT97Q2TQGNO" },
+  { id: 3, image: "/courcera-certificats/network_and_security.png", link: "https://www.coursera.org/account/accomplishments/verify/IW89T3BPL73V" },
+  { id: 4, image: "/courcera-certificats/project_management.png", link: "https://www.coursera.org/account/accomplishments/verify/IPP6T58ZM2PC" },
 ];
 
 // Montre 3 sur la homepage

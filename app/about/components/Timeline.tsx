@@ -2,14 +2,13 @@
 
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
-import { GraduationCap, Briefcase, Rocket, Code2 } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import "./Timeline.css";
 
 const timelineItems = [
-  { id: 1, icon: GraduationCap, type: "education" as const },
-  { id: 2, icon: GraduationCap, type: "education" as const },
-  { id: 3, icon: Briefcase, type: "work" as const },
-  { id: 4, icon: Rocket, type: "origin" as const },
+  { id: 1, icon: GraduationCap },
+  { id: 2, icon: GraduationCap },
+  { id: 3, icon: GraduationCap },
 ];
 
 export default function Timeline() {

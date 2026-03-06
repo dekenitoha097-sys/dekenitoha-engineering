@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
-import { Download, Printer, MapPin, Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Download, Printer, MapPin, Mail, Phone, Github, Linkedin, Globe } from "lucide-react";
 import Image from "next/image";
 import "./cv-page.css";
 
@@ -15,6 +15,7 @@ import "./cv-page.css";
 // 🧑 Infos personnelles
 const personalInfo = {
   photo: "/image.png",
+  portfolio: "https://your-portfolio-link.com",
   github: "https://github.com/dekenitoha097-sys/",
   linkedin: "https://www.linkedin.com/in/toha-dekeni-9b0599356/",
 };
@@ -48,6 +49,12 @@ const educations = [
     degreeKey: "cv.education.2.degree",
     schoolKey: "cv.education.2.school",
     descKey: "cv.education.2.desc",
+  },
+  {
+    periodKey: "cv.education.3.period",
+    degreeKey: "cv.education.3.degree",
+    schoolKey: "cv.education.3.school",
+    descKey: "cv.education.3.desc",
   },
 ];
 
@@ -180,6 +187,10 @@ export default function CVPage() {
               <span className="cv-contact-item">
                 <Phone size={14} />
                 {t("cv.phone" as TranslationKey)}
+              </span>
+              <span className="cv-contact-item">
+                <Globe size={14} />
+                {personalInfo.portfolio}
               </span>
               <span className="cv-contact-item">
                 <Github size={14} />

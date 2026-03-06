@@ -1,14 +1,14 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
-import { Github, ExternalLink, Layers, Code2, Sparkles } from "lucide-react";
+import { Github, ExternalLink, Layers, Code2, Sparkles, Download } from "lucide-react";
 import "./projects-page.css";
 
 // =============================================
-// 📋 DONNÉES PROJETS — Modifie / ajoute ici !
+// ðŸ“‹ DONNÃ‰ES PROJETS â€” Modifie / ajoute ici !
 // =============================================
 
 // Types
@@ -26,13 +26,14 @@ interface Project {
   techs: string[];
   github: string;
   demo: string;
+  download?: string;
   featured: boolean;
   year: number;
   color: string; // gradient accent pour chaque projet
   image: string; // chemin vers l'image du projet (dans /public)
 }
 
-// 🎨 Couleurs par domaine
+// ðŸŽ¨ Couleurs par domaine
 const domainColors: Record<string, string> = {
   web: "from-blue-accent",
   ai: "from-purple-accent",
@@ -41,33 +42,32 @@ const domainColors: Record<string, string> = {
   games: "from-pink-accent",
 };
 
-// Liste des projets — AJOUTE DES OBJETS ICI POUR AJOUTER DES PROJETS
+// Liste des projets â€” AJOUTE DES OBJETS ICI POUR AJOUTER DES PROJETS
 const projectsList: Project[] = [
   {
     id: "portfolio",
     titleFr: "Portfolio Personnel",
     titleEn: "Personal Portfolio",
     descFr:
-      "Site portfolio next-gen avec Next.js, design glassmorphism, bilingue FR/EN, système i18n custom, génération PDF du CV, styles d'impression premium.",
+      "Site portfolio next-gen avec Next.js, design glassmorphism, bilingue FR/EN, systéme i18n custom, génération PDF du CV, styles d'impression premium.",
     descEn:
       "Next-gen portfolio site with Next.js, glassmorphism design, bilingual FR/EN, custom i18n system, CV PDF generation, premium print styles.",
     domain: "web",
     lang: "typescript",
     techs: ["Next.js", "TypeScript", "CSS", "html2pdf.js"],
-    github: "https://github.com/dekenimawuli/portfolio",
+    github: "https://github.com/dekenitoha097-sys/dekenitoha-engineering.git",
     demo: "https://dekeni.dev",
     featured: true,
     year: 2025,
     color: "#0070f3",
-    image: "/projects/portfolio.jpg",
-
+    image: "/projects/portfolio.png",
   },
   {
     id: "ai-classifier",
     titleFr: "Classificateur d'Images IA",
     titleEn: "AI Image Classifier",
     descFr:
-      "Classification d'images par CNN avec TensorFlow. Interface React avec upload, visualisation des prédictions et métriques de confiance en temps réel.",
+      "Classification d'images par CNN avec TensorFlow. Interface React avec upload, visualisation des prédictions et métriques de confiance en temps reel.",
     descEn:
       "Image classification using CNN with TensorFlow. React interface with upload, live prediction visualization and confidence metrics.",
     domain: "ai",
@@ -82,7 +82,7 @@ const projectsList: Project[] = [
   },
   {
     id: "task-manager",
-    titleFr: "Gestionnaire de Tâches Full Stack",
+    titleFr: "Gestionnaire de Taches Full Stack",
     titleEn: "Full Stack Task Manager",
     descFr:
       "App full stack avec auth, CRUD complet, catégorisation, priorités, drag & drop, et interface responsive avec animations fluides.",
@@ -100,10 +100,10 @@ const projectsList: Project[] = [
   },
   {
     id: "cli-tool",
-    titleFr: "Dev CLI — Automatisation Rust",
-    titleEn: "Dev CLI — Rust Automation",
+    titleFr: "Dev CLI â€” Automatisation Rust",
+    titleEn: "Dev CLI â€” Rust Automation",
     descFr:
-      "Outil CLI haute performance en Rust : scaffold de projets, gestion de fichiers, formatage de code, avec système de plugins extensible.",
+      "Outil CLI haute performance en Rust : scaffold de projets, gestion de fichiers, formatage de code, avec systÃ¨me de plugins extensible.",
     descEn:
       "High-performance CLI tool in Rust: project scaffolding, file management, code formatting, with extensible plugin system.",
     domain: "tools",
@@ -118,10 +118,10 @@ const projectsList: Project[] = [
   },
   {
     id: "data-analysis",
-    titleFr: "Analyse de Données Exploratoire",
+    titleFr: "Analyse de DonnÃ©es Exploratoire",
     titleEn: "Exploratory Data Analysis",
     descFr:
-      "Projet universitaire : nettoyage de données massif, statistiques descriptives, visualisations interactives avec matplotlib et pandas.",
+      "Projet universitaire : nettoyage de donnÃ©es massif, statistiques descriptives, visualisations interactives avec matplotlib et pandas.",
     descEn:
       "University project: massive data cleaning, descriptive statistics, interactive visualizations with matplotlib and pandas.",
     domain: "academic",
@@ -136,10 +136,10 @@ const projectsList: Project[] = [
   },
   {
     id: "chat-app",
-    titleFr: "Chat Temps Réel",
+    titleFr: "Chat Temps RÃ©el",
     titleEn: "Real-Time Chat",
     descFr:
-      "Chat en temps réel avec WebSocket : salles privées, indicateur de frappe, notifications push, et thème sombre élégant.",
+      "Chat en temps rÃ©el avec WebSocket : salles privÃ©es, indicateur de frappe, notifications push, et thÃ¨me sombre Ã©lÃ©gant.",
     descEn:
       "Real-time chat with WebSocket: private rooms, typing indicator, push notifications, and elegant dark theme.",
     domain: "web",
@@ -151,6 +151,44 @@ const projectsList: Project[] = [
     year: 2023,
     color: "#0070f3",
     image: "/projects/chat-app.jpg",
+  },
+    {
+    id: "memory_game",
+    titleFr: "Jeu de memoire",
+    titleEn: "Memory Game",
+    descFr:
+      "Jeu de memoire developpe en Python avec un systeme de score sauvegarde dans une base de donnees SQLite3. Le joueur peut choisir entre plusieurs tailles de grille allant de 4x4 a 6x6.",
+    descEn:
+      "Memory game developed in Python with a score system stored in a SQLite3 database. Players can choose between multiple grid sizes ranging from 4x4 to 6x6.",
+    domain: "games",
+    lang: "python",
+    techs: ["Python", "SQLite3"],
+    github: "https://github.com/dekenitoha097-sys/memory_game.git",
+    demo: "",
+    download: "/downloads/memory-game.zip",
+    featured: true,
+    year: 2025,
+    color: "#ec4899",
+    image: "/projects/memory-game.png",
+  },
+    {
+    id: "breakout_game",
+    titleFr: "Jeu Breakout",
+    titleEn: "Breakout Game",
+    descFr:
+      "Jeu Breakout developpe en C++ avec la bibliotheque Raylib. Il comprend 30 niveaux, un menu principal, un systeme de parametres, la gestion du son et plusieurs niveaux de difficulte.",
+    descEn:
+      "Breakout game developed in C++ using the Raylib library. It features 30 levels, a main menu, settings, sound management, and multiple difficulty levels.",
+    domain: "games",
+    lang: "cpp",
+    techs: ["C++", "Raylib", "nlohmann/json"],
+    github: "https://github.com/dekenitoha097-sys/breakout-game.git",
+    demo: "",
+    download: "/downloads/breakout-game.zip",
+    featured: true,
+    year: 2025,
+    color: "#f472b6",
+    image: "/projects/breakout-game.png",
   },
 ];
 
@@ -183,9 +221,9 @@ export default function ProjectsPage() {
       <div className="hero-shell">
         <Header />
 
-        {/* ── Hero immersif ── */}
+        {/* â”€â”€ Hero immersif â”€â”€ */}
         <section className="pp-hero">
-          {/* Particules décoratives */}
+          {/* Particules dÃ©coratives */}
           <div className="pp-hero-orb pp-orb-1" />
           <div className="pp-hero-orb pp-orb-2" />
           <div className="pp-hero-orb pp-orb-3" />
@@ -230,7 +268,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        {/* ── Barre de filtres sticky ── */}
+        {/* â”€â”€ Barre de filtres sticky â”€â”€ */}
         <div className="pp-filter-bar">
           <div className="pp-filter-bar-inner">
 
@@ -279,7 +317,7 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        {/* ── Grille de projets — Layout Bento ── */}
+        {/* â”€â”€ Grille de projets â€” Layout Bento â”€â”€ */}
         <div className="pp-bento">
           {filteredProjects.length === 0 ? (
             <div className="pp-no-results">
@@ -370,6 +408,16 @@ export default function ProjectsPage() {
                       <span>{t("projects.viewDemo" as TranslationKey)}</span>
                     </a>
                   )}
+                  {project.domain === "games" && project.download && (
+                    <a
+                      href={project.download}
+                      className="pp-action pp-action--download"
+                      download
+                    >
+                      <Download size={16} />
+                      <span>{t("projects.downloadGame" as TranslationKey)}</span>
+                    </a>
+                  )}
                 </div>
               </article>
             ))
@@ -379,3 +427,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
+

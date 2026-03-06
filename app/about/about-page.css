@@ -85,3 +85,99 @@
     padding: 8rem 0 3rem;
   }
 }
+
+/* ============================================================
+   ABOUT PAGE - HIGHLIGHTS
+   ============================================================ */
+
+.about-page-highlights {
+  padding: 1.5rem 0 4rem;
+}
+
+.about-page-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.about-page-highlight-card {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: 18px;
+  padding: 1.35rem;
+  transition: all 0.3s ease;
+}
+
+.about-page-highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.35);
+  background: var(--glass-hover, rgba(255, 255, 255, 0.06));
+}
+
+.about-page-highlight-title {
+  margin: 0 0 0.55rem;
+  color: var(--text-main, #fff);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.about-page-highlight-text {
+  margin: 0;
+  color: var(--text-muted, #888);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.about-page-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-page-kpi-card {
+  padding: 1.2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.about-page-kpi-value {
+  display: block;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(135deg, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-page-kpi-label {
+  display: block;
+  color: var(--text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .about-page-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .about-page-kpis {
+    grid-template-columns: 1fr;
+  }
+}

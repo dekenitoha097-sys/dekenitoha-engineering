@@ -1,21 +1,21 @@
-// 🚀 Traductions : Section Projets + Page Projets
+﻿// ðŸš€ Traductions : Section Projets + Page Projets
 
 const projects = {
   fr: {
     // --- Section Homepage ---
-    "projects.eyebrow": "MES RÉALISATIONS",
+    "projects.eyebrow": "MES RÃ‰ALISATIONS",
     "projects.title": "Mes",
     "projects.titleHighlight": "Projets",
     "projects.description":
-      "Une sélection de projets personnels et académiques qui reflètent ma passion pour le développement et l'innovation.",
+      "Une sÃ©lection de projets personnels et acadÃ©miques qui reflÃ¨tent ma passion pour le dÃ©veloppement et l'innovation.",
     "projects.seeMore": "Voir tous les projets",
 
-    // --- Page détaillée ---
+    // --- Page dÃ©taillÃ©e ---
     "projectsPage.eyebrow": "PORTFOLIO",
     "projectsPage.title": "Tous Mes",
     "projectsPage.titleHighlight": "Projets",
     "projectsPage.intro":
-      "Explorez l'ensemble de mes projets, filtrés par domaine ou technologie. Chaque projet est un défi technique transformé en solution concrète.",
+      "Explorez l'ensemble de mes projets, filtrÃ©s par domaine ou technologie. Chaque projet est un dÃ©fi technique transformÃ© en solution concrÃ¨te.",
     "projectsPage.stats.projects": "Projets",
     "projectsPage.stats.techs": "Technologies",
     "projectsPage.stats.domains": "Domaines",
@@ -25,7 +25,7 @@ const projects = {
     "projectsPage.filter.web": "Web",
     "projectsPage.filter.ai": "Intelligence Artificielle",
     "projectsPage.filter.tools": "Outils & CLI",
-    "projectsPage.filter.academic": "Académique",
+    "projectsPage.filter.academic": "AcadÃ©mique",
     "projectsPage.filter.games": "Jeux",
 
     // --- Filtres par langage ---
@@ -43,6 +43,7 @@ const projects = {
     "projectsPage.featured": "En vedette",
     "projects.viewCode": "Code source",
     "projects.viewDemo": "Voir le site",
+    "projects.downloadGame": "Telecharger le jeu",
     "projects.techStack": "Technologies",
   },
   en: {
@@ -54,7 +55,7 @@ const projects = {
       "A selection of personal and academic projects that reflect my passion for development and innovation.",
     "projects.seeMore": "View all projects",
 
-    // --- Page détaillée ---
+    // --- Page dÃ©taillÃ©e ---
     "projectsPage.eyebrow": "PORTFOLIO",
     "projectsPage.title": "All My",
     "projectsPage.titleHighlight": "Projects",
@@ -87,8 +88,10 @@ const projects = {
     "projectsPage.featured": "Featured",
     "projects.viewCode": "Source code",
     "projects.viewDemo": "View site",
+    "projects.downloadGame": "Download game",
     "projects.techStack": "Technologies",
   },
 } as const;
 
 export default projects;
+

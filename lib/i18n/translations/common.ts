@@ -11,7 +11,7 @@ const common = {
     "nav.blog": "Blog",
     "nav.cv": "CV",
     "nav.contact": "Contact",
-    "nav.cta": "Commencer",
+    "nav.cta": "Voir mon CV",
     "brand": "Portfolio",
 
     "social.github": "GitHub",
@@ -29,7 +29,7 @@ const common = {
     "nav.blog": "Blog",
     "nav.cv": "CV",
     "nav.contact": "Contact",
-    "nav.cta": "Get Started",
+    "nav.cta": "View my CV",
     "brand": "Portfolio",
 
     "social.github": "GitHub",

@@ -190,6 +190,7 @@
 /* --- Links --- */
 .project-card-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.5rem;
 }
@@ -215,6 +216,14 @@
 
 .project-link--demo:hover {
   color: #93bbfd;
+}
+
+.project-link--download {
+  color: #93bbfd;
+}
+
+.project-link--download:hover {
+  color: #c7ddff;
 }
 
 /* --- CTA --- */

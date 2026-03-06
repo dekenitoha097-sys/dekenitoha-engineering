@@ -12,6 +12,8 @@ import projects from "./translations/projects";
 import cv from "./translations/cv";
 import certifications from "./translations/certifications";
 import blog from "./translations/blog";
+import contact from "./translations/contact";
+import footer from "./translations/footer";
 
 export const languages = ["fr", "en"] as const;
 export type Locale = (typeof languages)[number];
@@ -27,6 +29,8 @@ const translations = {
     ...cv.fr,
     ...certifications.fr,
     ...blog.fr,
+    ...contact.fr,
+    ...footer.fr,
   },
   en: {
     ...common.en,
@@ -38,6 +42,8 @@ const translations = {
     ...cv.en,
     ...certifications.en,
     ...blog.en,
+    ...contact.en,
+    ...footer.en,
   },
 } as const;
 
