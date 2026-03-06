@@ -4,7 +4,7 @@ import "./Projects.css";
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Download } from "lucide-react";
 
 // =============================================
 // 📋 DONNÉES PROJETS — Modifie / ajoute ici !
@@ -88,6 +88,34 @@ const projectsList = [
     demo: "",
     featured: false,
   },
+  {
+    id: "memory_game",
+    titleFr: "Jeu de memoire",
+    titleEn: "Memory Game",
+    descFr: "Jeu de memoire developpe en Python avec un systeme de score sauvegarde dans une base de donnees SQLite3. Le joueur peut choisir entre plusieurs tailles de grille allant de 4x4 a 6x6.",
+    descEn: "Memory game developed in Python with a score system stored in a SQLite3 database. Players can choose between multiple grid sizes ranging from 4x4 to 6x6.",
+    category: "games",
+    techs: ["Python", "SQLite3"],
+    image: "/projects/memory-game.png",
+    github: "https://github.com/dekenitoha097-sys/memory_game.git",
+    demo: "",
+    download: "/downloads/memory-game.zip",
+    featured: true,
+  },
+  {
+    id: "breakout_game",
+    titleFr: "Jeu Breakout",
+    titleEn: "Breakout Game",
+    descFr: "Jeu Breakout developpe en C++ avec la bibliotheque Raylib. Il comprend 30 niveaux, un menu principal, un systeme de parametres, la gestion du son et plusieurs niveaux de difficulte.",
+    descEn: "Breakout game developed in C++ using the Raylib library. It features 30 levels, a main menu, settings, sound management, and multiple difficulty levels.",
+    category: "games",
+    techs: ["C++", "Raylib", "nlohmann/json"],
+    image: "/projects/breakout-game.png",
+    github: "https://github.com/dekenitoha097-sys/breakout-game.git",
+    demo: "",
+    download: "/downloads/breakout-game.zip",
+    featured: true,
+  },
 ];
 
 // Nombre de projets affichés sur la homepage
@@ -162,6 +190,12 @@ export default function Projects() {
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link project-link--demo">
                       <ExternalLink size={15} />
                       {t("projects.viewDemo" as TranslationKey)}
+                    </a>
+                  )}
+                  {project.category === "games" && project.download && (
+                    <a href={project.download} className="project-link project-link--download" download>
+                      <Download size={15} />
+                      {t("projects.downloadGame" as TranslationKey)}
                     </a>
                   )}
                 </div>

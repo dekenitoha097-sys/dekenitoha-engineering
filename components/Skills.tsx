@@ -10,12 +10,12 @@ const categories = [
   {
     key: "software",
     icon: "devicon-c-plain",
-    techs: ["C", "C++", "Python", "TypeScript", "Rust"],
+    techs: ["C", "C++", "Python", "TypeScript", "Rust", "Java"],
   },
   {
     key: "web",
     icon: "devicon-react-original",
-    techs: ["React", "Next.js", "Node.js", "Tailwind CSS"],
+    techs: ["React", "Next.js", "Node.js", "Tailwind CSS", "HTML / CSS"],
   },
   {
     key: "ai",

@@ -31,7 +31,8 @@ export default function Header() {
 
   return (
     <header className="site-header fixed" role="banner">
-      <Link href="/" className="brand text-red-300 font-[var(--font-caveat)]" aria-label="Retour à l'accueil">
+      <Link href="/" className="brand" aria-label="Retour à l'accueil">
+        <span className="brand-logo">DK</span>
         {t("brand")}
       </Link>
 
@@ -52,17 +53,11 @@ export default function Header() {
         {/* Mobile-only actions inside nav */}
         <div className="mobile-nav-actions">
           <LanguageSwitcher />
-          <Link href="#contact" className="cta-pill" onClick={() => setMenuOpen(false)}>
-            {t("nav.cta")}
-          </Link>
         </div>
       </nav>
 
       <div className="header-actions">
         <LanguageSwitcher />
-        <Link href="#contact" className="cta-pill">
-          {t("nav.cta")}
-        </Link>
       </div>
 
       <button

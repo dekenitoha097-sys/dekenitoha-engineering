@@ -6,7 +6,7 @@ import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
 import "./skills-page.css";
 
-type SkillLevel = "advanced" | "intermediate" | "fundamentals";
+type SkillLevel = "advanced" | "intermediate" | "beginner" | "learning";
 
 interface SkillItem {
   name: string;
@@ -26,11 +26,12 @@ const skillCategories: SkillCategory[] = [
     key: "software",
     titleKey: "skillsPage.software.title",
     skills: [
-      { name: "C", icon: "devicon-c-plain colored", level: "advanced", descKey: "skillsPage.software.c.desc" },
-      { name: "C++", icon: "devicon-cplusplus-plain colored", level: "advanced", descKey: "skillsPage.software.cpp.desc" },
-      { name: "Python", icon: "devicon-python-plain colored", level: "advanced", descKey: "skillsPage.software.python.desc" },
+      { name: "C", icon: "devicon-c-plain colored", level: "intermediate", descKey: "skillsPage.software.c.desc" },
+      { name: "C++", icon: "devicon-cplusplus-plain colored", level: "intermediate", descKey: "skillsPage.software.cpp.desc" },
+      { name: "Python (scripting avance)", icon: "devicon-python-plain colored", level: "advanced", descKey: "skillsPage.software.python.desc" },
       { name: "TypeScript", icon: "devicon-typescript-plain colored", level: "advanced", descKey: "skillsPage.software.ts.desc" },
-      { name: "Rust", icon: "devicon-rust-original", level: "fundamentals", descKey: "skillsPage.software.rust.desc" },
+      { name: "Rust", icon: "devicon-rust-original", level: "learning", descKey: "skillsPage.software.rust.desc" },
+      { name: "Java", icon: "devicon-java-plain colored", level: "learning", descKey: "skillsPage.software.java.desc" },
       { name: "Algorithmique", icon: "devicon-thealgorithms-plain", level: "intermediate", descKey: "skillsPage.software.algo.desc" },
     ],
   },
@@ -40,7 +41,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "React", icon: "devicon-react-original colored", level: "advanced", descKey: "skillsPage.web.react.desc" },
       { name: "Next.js", icon: "devicon-nextjs-plain", level: "advanced", descKey: "skillsPage.web.next.desc" },
-      { name: "Node.js", icon: "devicon-nodejs-plain colored", level: "intermediate", descKey: "skillsPage.web.node.desc" },
+      { name: "Node.js", icon: "devicon-nodejs-plain colored", level: "advanced", descKey: "skillsPage.web.node.desc" },
       { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored", level: "advanced", descKey: "skillsPage.web.tailwind.desc" },
       { name: "HTML5", icon: "devicon-html5-plain colored", level: "advanced", descKey: "skillsPage.web.html.desc" },
       { name: "CSS3", icon: "devicon-css3-plain colored", level: "advanced", descKey: "skillsPage.web.css.desc" },
@@ -50,16 +51,16 @@ const skillCategories: SkillCategory[] = [
     key: "ai",
     titleKey: "skillsPage.ai.title",
     skills: [
-      { name: "TensorFlow", icon: "devicon-tensorflow-original colored", level: "intermediate", descKey: "skillsPage.ai.tf.desc" },
-      { name: "Machine Learning", icon: "devicon-python-plain colored", level: "intermediate", descKey: "skillsPage.ai.ml.desc" },
-      { name: "Data Analysis", icon: "devicon-pandas-plain", level: "fundamentals", descKey: "skillsPage.ai.data.desc" },
+      { name: "TensorFlow", icon: "devicon-tensorflow-original colored", level: "beginner", descKey: "skillsPage.ai.tf.desc" },
+      { name: "Machine Learning", icon: "devicon-python-plain colored", level: "beginner", descKey: "skillsPage.ai.ml.desc" },
+      { name: "Data Analysis", icon: "devicon-pandas-plain", level: "beginner", descKey: "skillsPage.ai.data.desc" },
     ],
   },
   {
     key: "db",
     titleKey: "skillsPage.db.title",
     skills: [
-      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored", level: "advanced", descKey: "skillsPage.db.pg.desc" },
+      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored", level: "intermediate", descKey: "skillsPage.db.pg.desc" },
       { name: "Prisma", icon: "devicon-prisma-original", level: "intermediate", descKey: "skillsPage.db.prisma.desc" },
       { name: "SQL", icon: "devicon-azuresqldatabase-plain colored", level: "advanced", descKey: "skillsPage.db.sql.desc" },
     ],
@@ -69,8 +70,8 @@ const skillCategories: SkillCategory[] = [
     titleKey: "skillsPage.tools.title",
     skills: [
       { name: "Git", icon: "devicon-git-plain colored", level: "advanced", descKey: "skillsPage.tools.git.desc" },
-      { name: "Docker", icon: "devicon-docker-plain colored", level: "intermediate", descKey: "skillsPage.tools.docker.desc" },
-      { name: "Linux", icon: "devicon-linux-plain", level: "intermediate", descKey: "skillsPage.tools.linux.desc" },
+      { name: "Docker", icon: "devicon-docker-plain colored", level: "beginner", descKey: "skillsPage.tools.docker.desc" },
+      { name: "Linux", icon: "devicon-linux-plain", level: "advanced", descKey: "skillsPage.tools.linux.desc" },
       { name: "VS Code", icon: "devicon-vscode-plain colored", level: "advanced", descKey: "skillsPage.tools.vscode.desc" },
       { name: "Figma", icon: "devicon-figma-plain colored", level: "intermediate", descKey: "skillsPage.tools.figma.desc" },
     ],
@@ -80,7 +81,8 @@ const skillCategories: SkillCategory[] = [
 const levelColors: Record<SkillLevel, string> = {
   advanced: "#34d399",
   intermediate: "#60a5fa",
-  fundamentals: "#c084fc",
+  beginner: "#f59e0b",
+  learning: "#c084fc",
 };
 
 export default function SkillsPage() {

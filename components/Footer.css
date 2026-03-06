@@ -1,0 +1,418 @@
+/* ============================================================
+   FOOTER — Ultra-Premium Minimal Design
+   ============================================================ */
+
+.site-footer {
+  position: relative;
+  padding: 0 0 2.5rem;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* ── Top accent line ── */
+.ft-accent-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 112, 243, 0.3) 20%,
+    rgba(168, 85, 247, 0.3) 50%,
+    rgba(34, 197, 94, 0.3) 80%,
+    transparent 100%
+  );
+  margin-bottom: 0;
+}
+
+/* ── Back to top ── */
+.ft-back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: fit-content;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted, #888);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 5;
+  backdrop-filter: blur(12px);
+}
+
+.ft-back-to-top:hover {
+  background: rgba(0, 112, 243, 0.08);
+  border-color: rgba(0, 112, 243, 0.25);
+  color: var(--accent, #0070f3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px -8px rgba(0, 112, 243, 0.2);
+}
+
+.ft-back-to-top svg {
+  transition: transform 0.3s ease;
+}
+
+.ft-back-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* ── Container ── */
+.ft-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Grid ── */
+.ft-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Brand column ── */
+.ft-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ft-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.ft-brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent, #0070f3), #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 16px -4px rgba(0, 112, 243, 0.3);
+}
+
+.ft-brand-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main, #fff);
+}
+
+.ft-brand-tagline {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted, #888);
+  max-width: 300px;
+}
+
+/* DK logo for footer */
+.ft-brand-icon-dk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  background: #fff;
+  color: #050505;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 900;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  margin-right: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.ft-brand-logo:hover .ft-brand-icon-dk {
+  background: var(--accent, #0070f3);
+  color: #fff;
+  transform: rotate(-6deg) scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 112, 243, 0.3);
+}
+
+/* Socials */
+.ft-socials {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.ft-social-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-muted, #888);
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ft-social-pill:hover {
+  background: rgba(0, 112, 243, 0.08);
+  border-color: rgba(0, 112, 243, 0.2);
+  color: var(--accent, #0070f3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px -6px rgba(0, 112, 243, 0.2);
+}
+
+/* ── Link columns ── */
+.ft-col-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--text-main, #fff);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.ft-col-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent, #0070f3);
+}
+
+.ft-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ft-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted, #888);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.ft-link::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent, #0070f3);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.ft-link:hover {
+  color: var(--text-main, #fff);
+  padding-left: 6px;
+}
+
+.ft-link:hover::before {
+  opacity: 1;
+  left: -8px;
+}
+
+.ft-link-ext {
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.ft-link:hover .ft-link-ext {
+  opacity: 1;
+  color: var(--accent, #0070f3);
+}
+
+/* ── Connect column ── */
+.ft-connect-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ft-connect-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-muted, #888);
+}
+
+.ft-connect-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  padding: 0.7rem 1.4rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.1), rgba(59, 130, 246, 0.06));
+  border: 1px solid rgba(0, 112, 243, 0.15);
+  color: var(--accent, #0070f3);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ft-connect-cta:hover {
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.15), rgba(59, 130, 246, 0.1));
+  border-color: rgba(0, 112, 243, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px rgba(0, 112, 243, 0.25);
+}
+
+/* ── Divider ── */
+.ft-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+}
+
+/* ── Bottom bar ── */
+.ft-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0 0;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ft-copyright {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted, #666);
+}
+
+.ft-made-with {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted, #666);
+  flex-wrap: wrap;
+}
+
+.ft-heart {
+  color: #ef4444;
+  animation: ftPulse 2s ease-in-out infinite;
+}
+
+@keyframes ftPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.ft-coffee-icon {
+  color: #f59e0b;
+}
+
+.ft-tech-badge {
+  margin-left: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted, #888);
+  letter-spacing: 0.3px;
+}
+
+/* ── Background glows ── */
+.ft-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.ft-glow-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 112, 243, 0.04), transparent 70%);
+  bottom: -80px;
+  left: -60px;
+}
+
+.ft-glow-2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.03), transparent 70%);
+  bottom: -40px;
+  right: -80px;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .ft-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .ft-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .ft-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ft-brand-col {
+    grid-column: 1;
+  }
+
+  .ft-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .ft-back-to-top {
+    margin-bottom: 2rem;
+  }
+}

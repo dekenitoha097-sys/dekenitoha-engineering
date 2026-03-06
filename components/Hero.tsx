@@ -60,10 +60,10 @@ export default function Hero() {
         </div>
 
         <div className="hero-actions">
-          <Link href="#contact" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             {t("hero.cta.contact")}
           </Link>
-          <Link href="#portfolio" className="btn btn-ghost">
+          <Link href="/projects" className="btn btn-ghost">
             {t("hero.cta.projects")}
           </Link>
         </div>

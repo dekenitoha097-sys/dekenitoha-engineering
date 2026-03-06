@@ -1,125 +1,107 @@
-// 📄 Traductions : About Section + About Page (Timeline, TechStack)
-
 const about = {
   fr: {
-    // About Section (homepage)
-    "about.eyebrow": "À PROPOS",
+    "about.eyebrow": "A PROPOS",
     "about.title.line1": "Qui suis-je",
     "about.title.highlight": "?",
     "about.description":
-      "Étudiant passionné en 2ème année d'Informatique & Intelligence Artificielle, je conçois des expériences web modernes et performantes. Mon approche allie rigueur technique et sensibilité créative pour transformer des idées en produits digitaux impactants.",
+      "Etudiant en 2eme annee d'Ingenierie Informatique et Intelligence Artificielle, je construis un profil d'ingenieur centre sur la resolution de problemes, la conception de solutions utiles et la progression continue.",
     "about.stat.projects": "Projets",
-    "about.stat.projects.value": "15+",
-    "about.stat.experience": "Ans d'expérience",
+    "about.stat.projects.value": "10+",
+    "about.stat.experience": "Annees d'etudes",
     "about.stat.experience.value": "2+",
     "about.stat.technologies": "Technologies",
-    "about.stat.technologies.value": "20+",
-    "about.stat.satisfaction": "Satisfaction",
-    "about.stat.satisfaction.value": "100%",
+    "about.stat.technologies.value": "10+",
+    "about.stat.satisfaction": "Cours completes",
+    "about.stat.satisfaction.value": "20+",
     "about.passion.title": "Ma Passion",
     "about.passion.description":
-      "Je suis animé par la volonté de créer des solutions élégantes à des problèmes complexes. Chaque ligne de code est une opportunité d'innover.",
+      "J'aime transformer des problemes complexes en solutions logicielles utiles, claires et evolutives.",
     "about.approach.title": "Mon Approche",
     "about.approach.description":
-      "Clean code, design thinking et amélioration continue. Je crois en la puissance d'un code bien structuré et d'une UI soignée.",
-    "about.cta": "Télécharger mon CV",
+      "Approche structuree: analyse, conception, implementation propre et amelioration continue.",
+    "about.cta": "Telecharger mon CV",
     "about.seeMore": "En savoir plus",
 
-    // About Page
-    "aboutPage.hero.eyebrow": "À PROPOS DE MOI",
-    "aboutPage.hero.title": "Développeur Full Stack",
-    "aboutPage.hero.titleHighlight": "& Passionné d'IA",
+    "aboutPage.hero.eyebrow": "A PROPOS DE MOI",
+    "aboutPage.hero.title": "Developpeur Full Stack",
+    "aboutPage.hero.titleHighlight": "& Etudiant IA",
     "aboutPage.hero.bio":
-      "Je m'appelle DEKENI Toha, étudiant en 2ème année d'Informatique et Intelligence Artificielle. Je conçois des expériences web modernes, performantes et accessibles. Mon objectif : transformer chaque idée en un produit digital qui fait la différence.",
-    "aboutPage.hero.location": "Basé à Casablanca, Maroc",
-    "aboutPage.hero.status": "Disponible pour freelance",
+      "Je suis DEKENI Toha, etudiant a HESTIM Casablanca. Mon objectif est de construire des produits web robustes et performants, avec une base academique solide en informatique et intelligence artificielle.",
+    "aboutPage.hero.location": "Base a Casablanca, Maroc",
+    "aboutPage.hero.status": "Ouvert aux stages academiques",
 
-    // Timeline
-    "aboutPage.timeline.eyebrow": "PARCOURS",
+    "aboutPage.timeline.eyebrow": "PARCOURS ACADEMIQUE",
     "aboutPage.timeline.title": "Mon",
     "aboutPage.timeline.titleHighlight": "Parcours",
-    "aboutPage.timeline.1.year": "2024 - Présent",
-    "aboutPage.timeline.1.title": "2ème Année — Informatique & IA",
+    "aboutPage.timeline.1.year": "2025 - 2026 (En cours)",
+    "aboutPage.timeline.1.title": "2eme Annee - Informatique & Intelligence Artificielle",
     "aboutPage.timeline.1.description":
-      "Approfondissement en algorithmes, machine learning, développement web avancé et bases de données.",
-    "aboutPage.timeline.2.year": "2023 - 2024",
-    "aboutPage.timeline.2.title": "1ère Année — Sciences Informatiques",
+      "HESTIM Casablanca: Developpement Web, Bases de donnees, Reseaux, Architecture des ordinateurs et Automate programmable.",
+    "aboutPage.timeline.2.year": "2024 - 2025",
+    "aboutPage.timeline.2.title": "1ere Annee - Informatique",
     "aboutPage.timeline.2.description":
-      "Fondamentaux de la programmation, structures de données, introduction au développement web et aux réseaux.",
-    "aboutPage.timeline.3.year": "2023",
-    "aboutPage.timeline.3.title": "Premiers Projets Freelance",
+      "HESTIM Casablanca: Fondamentaux de la programmation, Structures de donnees, Algorithme, Bases de donnees et Technique d'expression et communication.",
+    "aboutPage.timeline.3.year": "2023 - 2024",
+    "aboutPage.timeline.3.title": "Bac Scientifique - Mention Bien",
     "aboutPage.timeline.3.description":
-      "Création de sites web pour des clients locaux. Découverte de React, Next.js et du développement full stack.",
-    "aboutPage.timeline.4.year": "2022",
-    "aboutPage.timeline.4.title": "Début de l'aventure Code",
-    "aboutPage.timeline.4.description":
-      "Premiers pas en HTML, CSS et JavaScript. Passion immédiate pour la création d'interfaces utilisateur.",
+      "Baccalaureat scientifique obtenu a Sokode (Togo), avec Mention Bien.",
 
-    // Tech Stack
     "aboutPage.tech.eyebrow": "TECHNOLOGIES",
     "aboutPage.tech.title": "Ma Stack",
     "aboutPage.tech.titleHighlight": "Technique",
-    "aboutPage.tech.software": "Ingénierie Logicielle",
-    "aboutPage.tech.web": "Développement Web",
+    "aboutPage.tech.software": "Ingenierie Logicielle",
+    "aboutPage.tech.web": "Developpement Web",
     "aboutPage.tech.ai": "Intelligence Artificielle",
-    "aboutPage.tech.databases": "Bases de Données",
-    "aboutPage.tech.tools": "Outils & Systèmes",
+    "aboutPage.tech.databases": "Bases de Donnees",
+    "aboutPage.tech.tools": "Outils & Systemes",
   },
   en: {
-    // About Section (homepage)
     "about.eyebrow": "ABOUT ME",
     "about.title.line1": "Who am I",
     "about.title.highlight": "?",
     "about.description":
-      "A passionate 2nd year Computer Science & AI student, I build modern, high-performance web experiences. My approach blends technical rigor with creative sensibility to transform ideas into impactful digital products.",
+      "I am a 2nd-year Computer Science and AI engineering student, building an engineer profile focused on problem solving, useful solution design, and continuous progress.",
     "about.stat.projects": "Projects",
-    "about.stat.projects.value": "15+",
-    "about.stat.experience": "Years of experience",
+    "about.stat.projects.value": "10+",
+    "about.stat.experience": "Study years",
     "about.stat.experience.value": "2+",
     "about.stat.technologies": "Technologies",
-    "about.stat.technologies.value": "20+",
-    "about.stat.satisfaction": "Satisfaction",
-    "about.stat.satisfaction.value": "100%",
+    "about.stat.technologies.value": "10+",
+    "about.stat.satisfaction": "Completed courses",
+    "about.stat.satisfaction.value": "20+",
     "about.passion.title": "My Passion",
     "about.passion.description":
-      "I'm driven by the desire to craft elegant solutions to complex problems. Every line of code is an opportunity to innovate.",
+      "I enjoy turning complex problems into useful, clear, and scalable software solutions.",
     "about.approach.title": "My Approach",
     "about.approach.description":
-      "Clean code, design thinking and continuous improvement. I believe in the power of well-structured code and polished UI.",
+      "Structured approach: analysis, design, clean implementation, and continuous improvement.",
     "about.cta": "Download my CV",
     "about.seeMore": "See more",
 
-    // About Page
     "aboutPage.hero.eyebrow": "ABOUT ME",
     "aboutPage.hero.title": "Full Stack Developer",
-    "aboutPage.hero.titleHighlight": "& AI Enthusiast",
+    "aboutPage.hero.titleHighlight": "& AI Student",
     "aboutPage.hero.bio":
-      "I'm DEKENI Toha, a 2nd year Computer Science & AI student. I build modern, high-performance, and accessible web experiences. My goal: turn every idea into a digital product that makes a difference.",
+      "I am DEKENI Toha, a student at HESTIM Casablanca. My goal is to build robust, high-performance web products supported by a strong academic foundation in computer science and artificial intelligence.",
     "aboutPage.hero.location": "Based in Casablanca, Morocco",
-    "aboutPage.hero.status": "Available for freelance",
+    "aboutPage.hero.status": "Open to academic internships",
 
-    // Timeline
-    "aboutPage.timeline.eyebrow": "JOURNEY",
+    "aboutPage.timeline.eyebrow": "ACADEMIC JOURNEY",
     "aboutPage.timeline.title": "My",
     "aboutPage.timeline.titleHighlight": "Journey",
-    "aboutPage.timeline.1.year": "2024 - Present",
-    "aboutPage.timeline.1.title": "2nd Year — Computer Science & AI",
+    "aboutPage.timeline.1.year": "2025 - 2026 (Current)",
+    "aboutPage.timeline.1.title": "2nd Year - Computer Science & Artificial Intelligence",
     "aboutPage.timeline.1.description":
-      "Deep dive into algorithms, machine learning, advanced web development and databases.",
-    "aboutPage.timeline.2.year": "2023 - 2024",
-    "aboutPage.timeline.2.title": "1st Year — Computer Science",
+      "HESTIM Casablanca: Web Development, Databases, Networking, Computer Architecture, and Programmable Logic Controller.",
+    "aboutPage.timeline.2.year": "2024 - 2025",
+    "aboutPage.timeline.2.title": "1st Year - Computer Science",
     "aboutPage.timeline.2.description":
-      "Programming fundamentals, data structures, introduction to web development and networking.",
-    "aboutPage.timeline.3.year": "2023",
-    "aboutPage.timeline.3.title": "First Freelance Projects",
+      "HESTIM Casablanca: Programming Fundamentals, Data Structures, Algorithms, Databases, and Communication and Expression Techniques.",
+    "aboutPage.timeline.3.year": "2023 - 2024",
+    "aboutPage.timeline.3.title": "Scientific Baccalaureate - Honors",
     "aboutPage.timeline.3.description":
-      "Building websites for local clients. Discovered React, Next.js and full stack development.",
-    "aboutPage.timeline.4.year": "2022",
-    "aboutPage.timeline.4.title": "The Coding Adventure Begins",
-    "aboutPage.timeline.4.description":
-      "First steps with HTML, CSS and JavaScript. Instant passion for crafting user interfaces.",
+      "Scientific baccalaureate obtained in Sokode (Togo) with Honors (Mention Bien).",
 
-    // Tech Stack
     "aboutPage.tech.eyebrow": "TECHNOLOGIES",
     "aboutPage.tech.title": "My Tech",
     "aboutPage.tech.titleHighlight": "Stack",
