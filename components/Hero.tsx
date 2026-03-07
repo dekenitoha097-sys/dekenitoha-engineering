@@ -97,7 +97,7 @@ export default function Hero() {
 
           <div className="portrait-frame">
             <Image
-              src="/image.png"
+              src="/toha1.png"
               alt="Portrait de DEKENI Toha"
               fill
               sizes="(max-width: 992px) 100vw, 420px"

@@ -315,21 +315,58 @@
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .cv-hero {
-    padding: 8rem 0 2rem;
+    padding: 6rem 0 1.5rem;
+  }
+
+  .cv-hero-container {
+    padding: 0 1rem;
+  }
+
+  .cv-document {
+    padding: 0 1rem;
+    margin: 1.5rem auto 3rem;
   }
 
   .cv-doc-header {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .cv-photo-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cv-name {
+    font-size: 1.5rem;
+  }
+
+  .cv-role {
+    font-size: 0.95rem;
   }
 
   .cv-contact-info {
     align-items: center;
+    gap: 0.4rem;
+  }
+
+  .cv-contact-item {
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .cv-doc-body {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cv-section {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .cv-entry-header {
@@ -339,6 +376,69 @@
 
   .cv-entry-period {
     align-self: flex-start;
+  }
+
+  .cv-skill-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-hero {
+    padding: 5rem 0 1rem;
+  }
+
+  .cv-hero-title {
+    font-size: 2rem;
+  }
+
+  .cv-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cv-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cv-doc-header {
+    padding: 1.25rem;
+  }
+
+  .cv-photo-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cv-name {
+    font-size: 1.35rem;
+  }
+
+  .cv-role {
+    font-size: 0.85rem;
+  }
+
+  .cv-contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv-section {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cv-section-title {
+    font-size: 0.95rem;
+  }
+
+  .cv-entry-title {
+    font-size: 0.9rem;
+  }
+
+  .cv-entry-tasks li {
+    font-size: 0.8rem;
   }
 }
 

@@ -4,6 +4,7 @@ import "./Contact.css";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
 import { useState, useRef } from "react";
+import { trackContactSubmit } from "@/lib/analytics";
 import {
   Send,
   Mail,
@@ -58,6 +59,8 @@ export default function Contact() {
       if (!res.ok) throw new Error(data?.error ?? "Failed");
 
       setStatus("success");
+      // Track contact form submission
+      trackContactSubmit({ name: body.name, email: body.email, subject: body.subject });
       setFeedback({
         title: data?.message ?? t("contact.form.success" as TranslationKey),
         detail: data?.detail,

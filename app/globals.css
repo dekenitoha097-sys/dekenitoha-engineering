@@ -32,6 +32,19 @@
   position: relative;
 }
 
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  .hero-shell {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-shell {
+    padding: 0 0.75rem;
+  }
+}
+
 /* --- GRILLE DE FOND PRO --- */
 .hero-shell::before {
   content: '';

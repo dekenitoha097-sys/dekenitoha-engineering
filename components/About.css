@@ -252,12 +252,16 @@
 /* --- Responsive --- */
 @media (max-width: 992px) {
   .about {
-    padding: 6rem 0 5rem;
+    padding: 5rem 0 4rem;
+  }
+
+  .about-header {
+    margin-bottom: 3.5rem;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .about-text {
@@ -268,27 +272,78 @@
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
   }
 
   .about-cards {
     text-align: left;
+    gap: 1rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
   }
 
   .about-cta {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
+  .about-cta-group {
+    justify-content: center;
+  }
+
   .about-stats {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .about-stats {
+  .about {
+    padding: 4rem 0 3rem;
+  }
+
+  .about-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-cards {
     grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 1rem;
+  }
+
+  .about-card-title {
+    font-size: 1rem;
+  }
+
+  .about-card-text {
+    font-size: 0.875rem;
+  }
+
+  .about-stat {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-stat-value {
+    font-size: 2rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.75rem;
   }
 }

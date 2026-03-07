@@ -4,6 +4,7 @@ import "./Certifications.css";
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
+import { trackCertificateView } from "@/lib/analytics";
 import { Award, ArrowRight, ExternalLink } from "lucide-react";
 
 const certsList = [
@@ -78,6 +79,7 @@ export default function Certifications() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cert-card-link"
+                  onClick={() => trackCertificateView(cert.id.toString())}
                 >
                   <ExternalLink size={14} />
                   {t("certificationsPage.viewCredential" as TranslationKey)}
