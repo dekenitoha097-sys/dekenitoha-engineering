@@ -261,28 +261,85 @@
 
   .hero-actions {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .social-list {
     justify-content: center;
   }
 
-  .orbit-wrapper { max-width: 320px; }
+  .orbit-wrapper { 
+    max-width: 280px; 
+    margin: 0 auto;
+  }
 
   .orbit-ring {
-    width: 440px;
-    height: 440px;
+    width: 380px;
+    height: 380px;
   }
 
   .orbit-icon {
-    --radius: 220px;
-    width: 46px;
-    height: 46px;
-    margin: -23px 0 0 -23px;
+    --radius: 190px;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
   }
 
   .orbit-icon-inner img {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .portrait-frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .orbit-wrapper { 
+    max-width: 220px; 
+  }
+
+  .orbit-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-icon {
+    --radius: 150px;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+  }
+
+  .portrait-frame {
+    max-width: 260px;
+  }
+
+  .status-badge {
+    bottom: 16px;
+    left: 16px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }

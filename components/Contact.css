@@ -514,29 +514,64 @@
 @media (max-width: 900px) {
   .ct-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .ct-info-side {
     order: -1;
   }
+
+  .ct-container {
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 5rem 0 3rem;
+    padding: 4rem 0 2.5rem;
   }
 
   .ct-form-card {
-    padding: 1.75rem 1.25rem;
-    border-radius: 18px;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
   }
 
   .ct-info-grid {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .ct-info-card {
+    padding: 1rem;
   }
 
   .ct-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ct-title {
+    font-size: 1.75rem;
+  }
+
+  .ct-description {
+    font-size: 0.95rem;
+  }
+
+  .ct-social-link {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .ct-input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-extra-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-extra-hero p {
+    font-size: 0.95rem;
   }
 }

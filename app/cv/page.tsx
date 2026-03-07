@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
 import { Download, Printer, MapPin, Mail, Phone, Github, Linkedin, Globe } from "lucide-react";
+import { trackCvDownload, trackCvPrint, trackGithubVisit } from "@/lib/analytics";
 import Image from "next/image";
 import "./cv-page.css";
 
@@ -14,8 +15,8 @@ import "./cv-page.css";
 
 // 🧑 Infos personnelles
 const personalInfo = {
-  photo: "/image.png",
-  portfolio: "https://your-portfolio-link.com",
+  photo: "/toha1.png",
+  portfolio: "https://dekenitoha-engineering.vercel.app/",
   github: "https://github.com/dekenitoha097-sys/",
   linkedin: "https://www.linkedin.com/in/toha-dekeni-9b0599356/",
 };
@@ -81,6 +82,9 @@ export default function CVPage() {
 
   const handleDownloadPDF = async () => {
     if (!cvRef.current) return;
+    
+    // Track CV download
+    trackCvDownload();
 
     // Extraire les règles @media print et les appliquer temporairement à l'écran
     const printRules: string[] = [];
@@ -127,6 +131,7 @@ export default function CVPage() {
   };
 
   const handlePrint = () => {
+    trackCvPrint();
     window.print();
   };
 
@@ -194,7 +199,9 @@ export default function CVPage() {
               </span>
               <span className="cv-contact-item">
                 <Github size={14} />
-                {personalInfo.github}
+                <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" onClick={trackGithubVisit}>
+                  {personalInfo.github}
+                </a>
               </span>
               <span className="cv-contact-item">
                 <Linkedin size={14} />

@@ -387,22 +387,51 @@
 @media (max-width: 900px) {
   .ft-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .ft-brand-col {
     grid-column: 1 / -1;
+  }
+
+  .ft-container {
+    padding: 0 1rem;
   }
 }
 
 @media (max-width: 600px) {
   .ft-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   .ft-brand-col {
     grid-column: 1;
+    text-align: center;
+  }
+
+  .ft-brand-tagline {
+    max-width: 100%;
+  }
+
+  .ft-socials {
+    justify-content: center;
+  }
+
+  .ft-link-list {
+    align-items: center;
+    text-align: center;
+  }
+
+  .ft-col-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ft-connect-col {
+    align-items: center;
+    text-align: center;
   }
 
   .ft-bottom {
@@ -410,9 +439,14 @@
     align-items: center;
     text-align: center;
     gap: 0.5rem;
+    padding: 1rem 0 0;
   }
 
   .ft-back-to-top {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ft-tech-badge {
+    display: none;
   }
 }

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslation } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/translations";
+import { trackFirstVisit } from "@/lib/analytics";
 import "./FirstVisitLanguageGate.css";
 
 interface FirstVisitLanguageGateProps {
@@ -25,6 +26,9 @@ export default function FirstVisitLanguageGate({
   const handleLanguageChoice = (locale: Locale) => {
     setSelectedLocale(locale);
     setLocale(locale);
+
+    // Track first visit with selected language
+    trackFirstVisit(locale);
 
     document.cookie = `portfolio_locale=${locale}; path=/; max-age=${ONE_YEAR_SECONDS}; samesite=lax`;
     document.cookie = `portfolio_lang_chosen=1; path=/; max-age=${ONE_YEAR_SECONDS}; samesite=lax`;
