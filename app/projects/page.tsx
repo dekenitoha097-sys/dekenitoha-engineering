@@ -63,7 +63,7 @@ const projectsList: Project[] = [
     lang: "typescript",
     techs: ["Next.js", "TypeScript", "CSS", "html2pdf.js"],
     github: "https://github.com/dekenitoha097-sys/dekenitoha-engineering.git",
-    demo: "https://dekeni.dev",
+    demo: "",
     featured: true,
     year: 2025,
     color: "#0070f3",
@@ -135,7 +135,7 @@ const projectsList: Project[] = [
     featured: true,
     year: 2025,
     color: "#0070f3",
-    images: ["/projects/quiz_app.png"],
+    images: ["/projects/quiz_app.png","/projects/quiz_app1.png","/projects/quiz_app2.png"],
     featuresFr: [
       "Quiz dynamiques avec questions variées",
       "Sauvegarde des scores en temps réel Firebase",
@@ -169,7 +169,7 @@ const projectsList: Project[] = [
     featured: true,
     year: 2025,
     color: "#0070f3",
-    images: ["/projects/portfolio.png"],
+    images: ["/projects/dashboard.png"],
     featuresFr: [
       "Visualisation de données avancées avec D3.js",
       "Graphiques interactifs et dynamiques",
@@ -186,220 +186,6 @@ const projectsList: Project[] = [
     ],
     resultsFr: ["Visualisations fonctionnelles", "Graphiques interactifs", "Export de données"],
     resultsEn: ["Working visualizations", "Interactive charts", "Data export"]
-  },
-  {
-    id: "academic-platform",
-    titleFr: "Plateforme de Gestion Académique Multi-Rôles",
-    titleEn: "Multi-Role Academic Management Platform",
-    descFr:
-      "Je conçois et maintenu une plateforme académique complète avec trois espaces (admin, professeur, étudiant). Le backend Laravel expose une API sécurisée (Sanctum, policies, rôles), gère la logique métier (inscriptions automatiques, validation des notes, génération de bulletins) et s'appuie sur un service de cache centralisé. Le frontend Next.js fournit une interface moderne avec filtres avancés, modals métier cohérents, calendriers de cours/évaluations et parcours d'onboarding selon l'état des données académiques.",
-    descEn:
-      "I design and maintain a complete academic platform with three spaces (admin, professor, student). The Laravel backend exposes a secure API (Sanctum, policies, roles), handles business logic (automatic enrollments, grade validation, report generation) and relies on a centralized cache service. The Next.js frontend provides a modern interface with advanced filters, consistent business modals, course/evaluation calendars and onboarding paths based on academic data status.",
-    domain: "web",
-    lang: "typescript",
-    techs: ["Laravel", "Next.js", "MySQL", "Sanctum", "Tailwind CSS", "Redis", "Docker"],
-    github: "https://github.com/dekenitoha097-sys/academic-platform",
-    demo: "",
-    featured: true,
-    year: 2026,
-    color: "#0070f3",
-    images: ["/projects/academic-platform.png", "/projects/academic-2.png", "/projects/academic-3.png"],
-    featuresFr: [
-      "Gestion complète du cycle académique: années, semestres, filières, niveaux et cours",
-      "Espaces dédiés Admin / Professeur / Étudiant avec permissions par rôle",
-      "Workflow réel des notes: brouillon, soumission professeur, validation admin, recalcul académique",
-      "Calendriers intelligents pour l'emploi du temps et les évaluations",
-      "Alertes métier et onboarding guidé selon les prérequis de configuration",
-      "Optimisation des performances via mise en cache ciblée et invalidation contrôlée"
-    ],
-    featuresEn: [
-      "Complete academic cycle management: years, semesters, fields, levels and courses",
-      "Dedicated Admin / Professor / Student spaces with role-based permissions",
-      "Real grade workflow: draft, professor submission, admin validation, academic recalculation",
-      "Smart calendars for schedules and assessments",
-      "Business alerts and guided onboarding based on configuration prerequisites",
-      "Performance optimization through targeted caching and controlled invalidation"
-    ],
-    resultsFr: [
-      "Unification des opérations académiques sur un workflow unique multi-rôles",
-      "Gestion en environnement de test de dizaines de cours et plus de 100 évaluations",
-      "Réduction des incohérences grâce aux validations automatiques et filtres contextuels"
-    ],
-    resultsEn: [
-      "Unification of academic operations on a unique multi-role workflow",
-      "Test environment management of dozens of courses and over 100 assessments",
-      "Reduced inconsistencies through automatic validations and contextual filters"
-    ]
-  },
-  {
-    id: "ai-classifier",
-    titleFr: "Classificateur d'Images IA",
-    titleEn: "AI Image Classifier",
-    descFr:
-      "Classification d'images par CNN avec TensorFlow. Interface React avec upload, visualisation des prédictions et métriques de confiance en temps reel.",
-    descEn:
-      "Image classification using CNN with TensorFlow. React interface with upload, live prediction visualization and confidence metrics.",
-    domain: "ai",
-    lang: "python",
-    techs: ["Python", "TensorFlow", "React", "Tailwind CSS"],
-    github: "https://github.com/dekenimawuli/ai-classifier",
-    demo: "",
-    featured: true,
-    year: 2024,
-    color: "#a855f7",
-    images: ["/projects/ai-classifier.jpg"],
-    featuresFr: [
-      "Modèle CNN avec TensorFlow/Keras",
-      "Interface React avec upload d'images",
-      "Visualisation des prédictions en temps réel",
-      "Métriques de confiance (accuracy, loss)",
-      "Traitement par lots (batch processing)"
-    ],
-    featuresEn: [
-      "CNN model with TensorFlow/Keras",
-      "React interface with image upload",
-      "Real-time prediction visualization",
-      "Confidence metrics (accuracy, loss)",
-      "Batch processing support"
-    ],
-    resultsFr: ["Modèle IA fonctionnel", "Précision de classification", "Interface responsive"],
-    resultsEn: ["Working AI model", "Classification accuracy", "Responsive interface"]
-  },
-  {
-    id: "task-manager",
-    titleFr: "Gestionnaire de Taches Full Stack",
-    titleEn: "Full Stack Task Manager",
-    descFr:
-      "App full stack avec auth, CRUD complet, catégorisation, priorités, drag & drop, et interface responsive avec animations fluides.",
-    descEn:
-      "Full stack app with auth, complete CRUD, categorization, priorities, drag & drop, and responsive interface with fluid animations.",
-    domain: "web",
-    lang: "typescript",
-    techs: ["React", "Node.js", "PostgreSQL", "Prisma"],
-    github: "https://github.com/dekenimawuli/task-manager",
-    demo: "https://task-manager.dekeni.dev",
-    featured: true,
-    year: 2024,
-    color: "#0070f3",
-    images: ["/projects/task-manager.jpg"],
-    featuresFr: [
-      "Authentication complète (JWT)",
-      "CRUD complet des tâches",
-      "Catégorisation et priorisation",
-      "Drag & drop interactif",
-      "Interface responsive avec animations"
-    ],
-    featuresEn: [
-      "Complete authentication (JWT)",
-      "Full task CRUD",
-      "Categorization and prioritization",
-      "Interactive drag & drop",
-      "Responsive interface with animations"
-    ],
-    resultsFr: ["Application fonctionnelle", "Gestion complète des tâches", "Interface fluide"],
-    resultsEn: ["Working application", "Complete task management", "Smooth interface"]
-  },
-  {
-    id: "cli-tool",
-    titleFr: "Dev CLI â€” Automatisation Rust",
-    titleEn: "Dev CLI â€” Rust Automation",
-    descFr:
-      "Outil CLI haute performance en Rust : scaffold de projets, gestion de fichiers, formatage de code, avec systÃ¨me de plugins extensible.",
-    descEn:
-      "High-performance CLI tool in Rust: project scaffolding, file management, code formatting, with extensible plugin system.",
-    domain: "tools",
-    lang: "rust",
-    techs: ["Rust", "CLI", "Cargo"],
-    github: "https://github.com/dekenimawuli/cli-tool",
-    demo: "",
-    featured: false,
-    year: 2024,
-    color: "#f97316",
-    images: ["/projects/cli-tool.jpg"],
-    featuresFr: [
-      "Scaffold de projets automatisé",
-      "Gestion de fichiers avancées",
-      "Formatage de code (Rust, JS, TS)",
-      "Système de plugins extensible",
-      "Commandes personnalisables"
-    ],
-    featuresEn: [
-      "Automated project scaffolding",
-      "Advanced file management",
-      "Code formatting (Rust, JS, TS)",
-      "Extensible plugin system",
-      "Customizable commands"
-    ],
-    resultsFr: ["Outil fonctionnel", "Automatisation du développement", "Gain de productivité"],
-    resultsEn: ["Working tool", "Development automation", "Productivity gain"]
-  },
-  {
-    id: "data-analysis",
-    titleFr: "Analyse de DonnÃ©es Exploratoire",
-    titleEn: "Exploratory Data Analysis",
-    descFr:
-      "Projet universitaire : nettoyage de donnÃ©es massif, statistiques descriptives, visualisations interactives avec matplotlib et pandas.",
-    descEn:
-      "University project: massive data cleaning, descriptive statistics, interactive visualizations with matplotlib and pandas.",
-    domain: "academic",
-    lang: "python",
-    techs: ["Python", "Pandas", "Matplotlib", "NumPy"],
-    github: "https://github.com/dekenimawuli/data-analysis",
-    demo: "",
-    featured: false,
-    year: 2024,
-    color: "#22c55e",
-    images: ["/projects/data-analysis.jpg"],
-    featuresFr: [
-      "Nettoyage de données massif avec Pandas",
-      "Statistiques descriptives complètes",
-      "Visualisations interactives Matplotlib",
-      "Analyse de corrélation",
-      "Rapports automatisés"
-    ],
-    featuresEn: [
-      "Massive data cleaning with Pandas",
-      "Complete descriptive statistics",
-      "Interactive Matplotlib visualizations",
-      "Correlation analysis",
-      "Automated reports"
-    ],
-    resultsFr: ["Analyse complète des données", "Visualisations automatisées", "Rapports générés"],
-    resultsEn: ["Complete data analysis", "Automated visualizations", "Generated reports"]
-  },
-  {
-    id: "chat-app",
-    titleFr: "Chat Temps RÃ©el",
-    titleEn: "Real-Time Chat",
-    descFr:
-      "Chat en temps rÃ©el avec WebSocket : salles privÃ©es, indicateur de frappe, notifications push, et thÃ¨me sombre Ã©lÃ©gant.",
-    descEn:
-      "Real-time chat with WebSocket: private rooms, typing indicator, push notifications, and elegant dark theme.",
-    domain: "web",
-    lang: "javascript",
-    techs: ["React", "Node.js", "WebSocket", "CSS"],
-    github: "https://github.com/dekenimawuli/chat-app",
-    demo: "https://chat.dekeni.dev",
-    featured: false,
-    year: 2023,
-    color: "#0070f3",
-    images: ["/projects/chat-app.jpg"],
-    featuresFr: [
-      "Messagerie temps réel avec WebSocket",
-      "Salles privées et publiques",
-      "Indicateur de frappe en direct",
-      "Notifications push",
-      "Thème sombre élégant"
-    ],
-    featuresEn: [
-      "Real-time messaging with WebSocket",
-      "Private and public rooms",
-      "Live typing indicator",
-      "Push notifications",
-      "Elegant dark theme"
-    ],
-    resultsFr: ["Chat temps réel fonctionnel", "Salles multiples", "Interface moderne"],
-    resultsEn: ["Working real-time chat", "Multiple rooms", "Modern interface"]
   },
     {
     id: "memory_game",
@@ -453,7 +239,7 @@ const projectsList: Project[] = [
     featured: true,
     year: 2025,
     color: "#f472b6",
-    images: ["/projects/breakout-game.png"],
+    images: ["/projects/breakout-game0.png","/projects/breakout-game.png","/projects/breakout-game1.png"],
     featuresFr: [
       "30 niveaux de jeu progressifs",
       "Menu principal et système de paramètres",
@@ -487,7 +273,7 @@ const projectsList: Project[] = [
     featured: true,
     year: 2026,
     color: "#22c55e",
-    images: ["/projects/monic.png"],
+    images: ["/projects/monic.png","/projects/monic1.png"],
     featuresFr: [
       "Monitoring CPU, RAM et Load Average",
       "Affichage de l'Uptime système",
@@ -504,7 +290,41 @@ const projectsList: Project[] = [
     ],
     resultsFr: ["Monitoring système fonctionnel", "Deux modes d'affichage", "Données en temps réel"],
     resultsEn: ["Working system monitoring", "Two display modes", "Real-time data"]
-  }
+  },
+  {
+  id: "iot-temp-sensor",
+  titleFr: "Capteur Température & Humidité",
+  titleEn: "Temperature & Humidity Sensor",
+  descFr:
+    "Projet scolaire IoT utilisant un capteur de température et d'humidité pour collecter les données en temps réel et les enregistrer dans une base de données. Les valeurs peuvent être visualisées via une interface simple ou exploitées pour des analyses ultérieures.",
+  descEn:
+    "IoT school project using a temperature and humidity sensor to collect real-time data and store it in a database. Values can be visualized via a simple interface or used for further analysis.",
+  domain: "academic",
+  lang: "python",
+  techs: ["Python", "SQLite3", "ESP32", "DHT22"],
+  github: "https://github.com/tohaDEKENI/esp32-weather-station-Projet-Fin-d-ann-e-.git",
+  demo: "",
+  featured: true,
+  year: 2026,
+  color: "#f59e0b",
+  images: ["/projects/iot1.png","/projects/iot.png","/projects/iot2.png","/projects/iot3.png"],
+  featuresFr: [
+    "Collecte en temps réel des valeurs de température et d'humidité",
+    "Stockage automatique dans une base de données SQLite3",
+    "Utilisation d'un capteur DHT22 avec Raspberry Pi",
+    "Visualisation simple des données via interface Python",
+    "Possibilité d'export des données pour analyse"
+  ],
+  featuresEn: [
+    "Real-time collection of temperature and humidity values",
+    "Automatic storage in SQLite3 database",
+    "Using DHT22 sensor with Raspberry Pi",
+    "Simple data visualization via Python interface",
+    "Option to export data for analysis"
+  ],
+  resultsFr: ["Données collectées en temps réel", "Stockage fiable dans la base", "Visualisation fonctionnelle"],
+  resultsEn: ["Real-time data collection", "Reliable database storage", "Working data visualization"]
+}
 ];
 
 // Filtres disponibles

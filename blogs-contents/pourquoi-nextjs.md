@@ -1,41 +1,47 @@
 ---
-title: "Pourquoi j'ai choisi Next.js pour mon portfolio"
-titleEn: "Why I chose Next.js for my portfolio"
-date: "2025-01-15"
-excerpt: "Retour d'expérience sur le choix de Next.js comme framework pour construire un portfolio moderne, performant et maintenable."
-excerptEn: "Feedback on choosing Next.js as a framework to build a modern, performant and maintainable portfolio."
-tags: ["Next.js", "React", "Web Dev"]
-readTime: 5
+title: "Pourquoi Next.js ? Mon choix pour mon portfolio"
+titleEn: "Why Next.js? My Choice for My Portfolio"
+description: "Découvrez pourquoi j'ai choisi Next.js pour construire mon portfolio et les avantages de ce framework."
+descriptionEn: "Discover why I chose Next.js to build my portfolio and the advantages of this framework."
+excerpt: "Un aperçu des raisons qui m'ont poussé à choisir Next.js pour mon portfolio personnel."
+excerptEn: "An overview of the reasons that led me to choose Next.js for my personal portfolio."
+date: "2024-01-15"
+tags: ["Next.js", "React", "Web Development", "Portfolio"]
 coverColor: "#0070f3"
+readTime: 4
 ---
 
-# Pourquoi j'ai choisi Next.js pour mon portfolio
+![Illustration d'une page web Next.js](https://tse3.mm.bing.net/th/id/OIP.E2KVdDtY6U3pclCqQOR_HQHaET?rs=1&pid=ImgDetMain&o=7&rm=3)
 
-Quand j'ai décidé de construire mon portfolio, j'avais plusieurs options : React pur, Gatsby, Astro, ou Next.js. Voici pourquoi Next.js a été le choix final.
+# Pourquoi Next.js ? Mon choix pour mon portfolio
 
-## Les critères de sélection
+Quand j'ai décidé de créer mon portfolio, le choix de la technologie était crucial. Après réflexion, j'ai opté pour **Next.js**. Voici pourquoi.
 
-1. **Performance** — Le site devait charger en moins de 2 secondes
-2. **SEO** — Les pages devaient être indexables par les moteurs de recherche
-3. **Flexibilité** — Pouvoir mélanger SSR, SSG et client-side rendering
-4. **Écosystème** — Une communauté active et des outils matures
+## Les Avantages de Next.js
 
-## L'App Router : un game-changer
+### 1. Performance
 
-L'App Router de Next.js 14+ offre une architecture basée sur les fichiers qui simplifie énormément le routing. Chaque dossier dans `app/` devient une route.
+Next.js offre plusieurs stratégies de rendu qui optimisent les performances :
 
-```typescript
-// app/projects/page.tsx → /projects
-// app/blogs/[slug]/page.tsx → /blogs/mon-article
+- **Server-Side Rendering (SSR)** : Le contenu est généré à chaque requête
+- **Static Site Generation (SSG)** : Les pages sont pré-générées au build
+- **Incremental Static Regeneration (ISR)** : mise à jour sans redéploiement
 
-const age = 19;
-console.log(age);
-```
+### 2. SEO
 
-## Le Server-Side Rendering
+Le SSR améliore considérablement le référencement naturel car les moteurs de recherche peuvent indexer le contenu facilement.
 
-Avec Next.js, chaque page peut choisir sa stratégie de rendu. Pour un portfolio, le SSG (Static Site Generation) est parfait : le contenu change rarement et les pages sont pré-rendues.
+### 3. DX (Developer Experience)
+
+- Hot Reloading instantané
+- Routing automatique basé sur le système de fichiers
+- API routes intégrées
+- Support TypeScript natif
+
+## Mon Expérience
+
+Depuis que j'utilise Next.js, le développement de mon portfolio est devenu un vrai plaisir. La communauté est active et les ressources sont abondantes.
 
 ## Conclusion
 
-Next.js offre le meilleur compromis entre performance, flexibilité et developer experience. C'est un choix que je recommande pour tout projet portfolio.
+Next.js est un choix excellent pour tout développeur web moderne. C'est pourquoi je le recommande chaleureusement !
