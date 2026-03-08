@@ -23,8 +23,8 @@ const about = {
     "about.seeMore": "En savoir plus",
 
     "aboutPage.hero.eyebrow": "A PROPOS DE MOI",
-    "aboutPage.hero.title": "Developpeur Full Stack",
-    "aboutPage.hero.titleHighlight": "& Etudiant IA",
+    "aboutPage.hero.title": "Etudiant en 2eme annee d'Ingenierie Informatique et IA",
+    "aboutPage.hero.titleHighlight": " developpeur full stack",
     "aboutPage.hero.bio":
       "Je suis DEKENI Toha, etudiant a HESTIM Casablanca. Mon objectif est de construire des produits web robustes et performants, avec une base academique solide en informatique et intelligence artificielle.",
     "aboutPage.hero.location": "Base a Casablanca, Maroc",
@@ -51,7 +51,7 @@ const about = {
     "aboutPage.tech.titleHighlight": "Technique",
     "aboutPage.tech.software": "Ingenierie Logicielle",
     "aboutPage.tech.web": "Developpement Web",
-    "aboutPage.tech.ai": "Intelligence Artificielle",
+    "aboutPage.tech.ai": "IA et Data",
     "aboutPage.tech.databases": "Bases de Donnees",
     "aboutPage.tech.tools": "Outils & Systemes",
   },
@@ -79,8 +79,8 @@ const about = {
     "about.seeMore": "See more",
 
     "aboutPage.hero.eyebrow": "ABOUT ME",
-    "aboutPage.hero.title": "Full Stack Developer",
-    "aboutPage.hero.titleHighlight": "& AI Student",
+    "aboutPage.hero.title": "2nd Year Computer Science & AI Engineering Student",
+    "aboutPage.hero.titleHighlight": " full stack developer",
     "aboutPage.hero.bio":
       "I am DEKENI Toha, a student at HESTIM Casablanca. My goal is to build robust, high-performance web products supported by a strong academic foundation in computer science and artificial intelligence.",
     "aboutPage.hero.location": "Based in Casablanca, Morocco",
@@ -107,7 +107,7 @@ const about = {
     "aboutPage.tech.titleHighlight": "Stack",
     "aboutPage.tech.software": "Software Engineering",
     "aboutPage.tech.web": "Web Development",
-    "aboutPage.tech.ai": "Artificial Intelligence",
+    "aboutPage.tech.ai": "AI and Data",
     "aboutPage.tech.databases": "Databases",
     "aboutPage.tech.tools": "Tools & Systems",
   },

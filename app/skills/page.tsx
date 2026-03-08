@@ -51,9 +51,12 @@ const skillCategories: SkillCategory[] = [
     key: "ai",
     titleKey: "skillsPage.ai.title",
     skills: [
-      { name: "TensorFlow", icon: "devicon-tensorflow-original colored", level: "beginner", descKey: "skillsPage.ai.tf.desc" },
       { name: "Machine Learning", icon: "devicon-python-plain colored", level: "intermediate", descKey: "skillsPage.ai.ml.desc" },
+      { name: "Scikit-learn", icon: "devicon-python-plain colored", level: "beginner", descKey: "skillsPage.ai.sklearn.desc" },
       { name: "Data Analysis", icon: "devicon-pandas-plain", level: "beginner", descKey: "skillsPage.ai.data.desc" },
+      { name: "NumPy", icon: "devicon-numpy-plain", level: "intermediate", descKey: "skillsPage.ai.numpy.desc" },
+      { name: "Pandas", icon: "devicon-pandas-plain", level: "intermediate", descKey: "skillsPage.ai.pandas.desc" },
+      { name: "Matplotlib", icon: "devicon-matplotlib-plain", level: "intermediate", descKey: "skillsPage.ai.matplotlib.desc" },
     ],
   },
   {
@@ -61,7 +64,7 @@ const skillCategories: SkillCategory[] = [
     titleKey: "skillsPage.db.title",
     skills: [
       { name: "PostgreSQL", icon: "devicon-postgresql-plain colored", level: "intermediate", descKey: "skillsPage.db.pg.desc" },
-      { name: "Prisma", icon: "devicon-prisma-original", level: "intermediate", descKey: "skillsPage.db.prisma.desc" },
+      { name: "MySQL", icon: "devicon-mysql-plain colored", level: "intermediate", descKey: "skillsPage.db.mysql.desc" },
       { name: "SQL", icon: "devicon-azuresqldatabase-plain colored", level: "advanced", descKey: "skillsPage.db.sql.desc" },
     ],
   },
@@ -73,7 +76,6 @@ const skillCategories: SkillCategory[] = [
       { name: "Docker", icon: "devicon-docker-plain colored", level: "beginner", descKey: "skillsPage.tools.docker.desc" },
       { name: "Linux", icon: "devicon-linux-plain", level: "advanced", descKey: "skillsPage.tools.linux.desc" },
       { name: "VS Code", icon: "devicon-vscode-plain colored", level: "advanced", descKey: "skillsPage.tools.vscode.desc" },
-      { name: "Figma", icon: "devicon-figma-plain colored", level: "intermediate", descKey: "skillsPage.tools.figma.desc" },
     ],
   },
   {

@@ -13,6 +13,7 @@ const techCategories = [
       { name: "Python", icon: "devicon-python-plain colored" },
       { name: "TypeScript", icon: "devicon-typescript-plain colored" },
       { name: "Rust", icon: "devicon-rust-original" },
+      { name: "Java", icon: "devicon-java-plain colored" },
     ],
   },
   {
@@ -30,16 +31,19 @@ const techCategories = [
   {
     key: "ai",
     techs: [
-      { name: "TensorFlow", icon: "devicon-tensorflow-original colored" },
-      { name: "Python", icon: "devicon-python-plain colored" },
-      { name: "Three.js", icon: "devicon-threejs-original" },
+      { name: "Machine Learning", icon: "devicon-python-plain colored" },
+      { name: "Scikit-learn", icon: "devicon-python-plain colored" },
+      { name: "NumPy", icon: "devicon-numpy-plain" },
+      { name: "Pandas", icon: "devicon-pandas-plain" },
+      { name: "Matplotlib", icon: "devicon-matplotlib-plain" },
     ],
   },
   {
     key: "databases",
     techs: [
       { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-      { name: "Prisma", icon: "devicon-prisma-original" },
+      { name: "MySQL", icon: "devicon-mysql-plain colored" },
+      { name: "SQL", icon: "devicon-azuresqldatabase-plain colored" },
     ],
   },
   {
@@ -49,7 +53,6 @@ const techCategories = [
       { name: "Docker", icon: "devicon-docker-plain colored" },
       { name: "Linux", icon: "devicon-linux-plain" },
       { name: "VS Code", icon: "devicon-vscode-plain colored" },
-      { name: "Figma", icon: "devicon-figma-plain colored" },
     ],
   },
 ];

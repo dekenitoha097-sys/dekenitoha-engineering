@@ -19,13 +19,13 @@ const categories = [
   },
   {
     key: "ai",
-    icon: "devicon-tensorflow-original",
-    techs: ["TensorFlow", "Machine Learning", "Data Analysis"],
+    icon: "devicon-python-plain",
+    techs: ["Machine Learning", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
   },
   {
     key: "db",
     icon: "devicon-postgresql-plain",
-    techs: ["PostgreSQL", "Prisma", "SQL"],
+    techs: ["PostgreSQL", "MySQL", "SQL"],
   },
   {
     key: "tools",

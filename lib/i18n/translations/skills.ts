@@ -45,11 +45,14 @@ const skills = {
     "skillsPage.ai.title": "Intelligence Artificielle & Data",
     "skillsPage.ai.tf.desc": "Bases de modelisation et entrainement avec.",
     "skillsPage.ai.ml.desc": "Bases en machine learning applique (Scikit-learn).",
-    "skillsPage.ai.data.desc": "Bases de nettoyage et d'analyse de donnees (Pandas, NumPy, SymPy).",
-
+    "skillsPage.ai.sklearn.desc": "Algorithmie de machine learning et modelisation predictive.",
+    "skillsPage.ai.data.desc": "Bases de nettoyage et d'analyse de donnees (Pandas, NumPy, SymPy).",    "skillsPage.ai.numpy.desc": "Calcul scientifique et manipulation de tableaux multidimensionnels.",
+    "skillsPage.ai.pandas.desc": "Analyse de donnees, manipulation de DataFrames et nettoyage.",
+    "skillsPage.ai.matplotlib.desc": "Creation de graphiques et visualisations de donnees.",
     "skillsPage.db.title": "Bases de Donnees",
     "skillsPage.db.pg.desc": "Modelisation relationnelle et requetes SQL avancees.",
     "skillsPage.db.prisma.desc": "Integration ORM pour projets TypeScript.",
+    "skillsPage.db.mysql.desc": "Gestion de bases de donnees relationnelles avec MySQL.",
     "skillsPage.db.sql.desc": "Maitrise des requetes SQL et de la logique relationnelle.",
 
     "skillsPage.tools.title": "Outils & Environnement",
@@ -113,11 +116,15 @@ const skills = {
     "skillsPage.ai.title": "Artificial Intelligence & Data",
     "skillsPage.ai.tf.desc": "Foundations of modeling and training with TensorFlow.",
     "skillsPage.ai.ml.desc": "Foundations of applied machine learning.",
+    "skillsPage.ai.sklearn.desc": "Machine learning algorithms and predictive modeling.",
     "skillsPage.ai.data.desc": "Foundations of data cleaning and analysis.",
-
+    "skillsPage.ai.numpy.desc": "Scientific computing and multidimensional array manipulation.",
+    "skillsPage.ai.pandas.desc": "Data analysis, DataFrame manipulation and cleaning.",
+    "skillsPage.ai.matplotlib.desc": "Creating charts and data visualizations.",
     "skillsPage.db.title": "Databases",
     "skillsPage.db.pg.desc": "Relational modeling and advanced SQL querying.",
     "skillsPage.db.prisma.desc": "ORM integration for TypeScript projects.",
+    "skillsPage.db.mysql.desc": "Relational database management with MySQL.",
     "skillsPage.db.sql.desc": "Strong SQL querying and relational logic.",
 
     "skillsPage.tools.title": "Tools & Environment",
