@@ -39,7 +39,7 @@ const projects = {
     // --- Labels ---
     "projectsPage.domainLabel": "Domaine",
     "projectsPage.langLabel": "Langage",
-    "projectsPage.noResults": "Aucun projet trouvé pour ces filtres.",
+    "projectsPage.noResults": "De nouveaux projets seront bientôt disponibles. Restez à l'écoute !",
     "projectsPage.featured": "En vedette",
     "projects.viewCode": "Code source",
     "projects.viewDemo": "Voir le site",
@@ -85,7 +85,7 @@ const projects = {
     // --- Labels ---
     "projectsPage.domainLabel": "Domain",
     "projectsPage.langLabel": "Language",
-    "projectsPage.noResults": "No projects found for these filters.",
+    "projectsPage.noResults": "New projects will be available soon. Stay tuned!",
     "projectsPage.featured": "Featured",
     "projects.viewCode": "Source code",
     "projects.viewDemo": "View site",

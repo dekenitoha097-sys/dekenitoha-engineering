@@ -52,7 +52,7 @@ const skillCategories: SkillCategory[] = [
     titleKey: "skillsPage.ai.title",
     skills: [
       { name: "TensorFlow", icon: "devicon-tensorflow-original colored", level: "beginner", descKey: "skillsPage.ai.tf.desc" },
-      { name: "Machine Learning", icon: "devicon-python-plain colored", level: "beginner", descKey: "skillsPage.ai.ml.desc" },
+      { name: "Machine Learning", icon: "devicon-python-plain colored", level: "intermediate", descKey: "skillsPage.ai.ml.desc" },
       { name: "Data Analysis", icon: "devicon-pandas-plain", level: "beginner", descKey: "skillsPage.ai.data.desc" },
     ],
   },
@@ -74,6 +74,18 @@ const skillCategories: SkillCategory[] = [
       { name: "Linux", icon: "devicon-linux-plain", level: "advanced", descKey: "skillsPage.tools.linux.desc" },
       { name: "VS Code", icon: "devicon-vscode-plain colored", level: "advanced", descKey: "skillsPage.tools.vscode.desc" },
       { name: "Figma", icon: "devicon-figma-plain colored", level: "intermediate", descKey: "skillsPage.tools.figma.desc" },
+    ],
+  },
+  {
+    key: "soft",
+    titleKey: "skillsPage.soft.title",
+    skills: [
+      { name: "Travail en équipe", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.soft.teamwork.desc" },
+      { name: "Communication", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.soft.communication.desc" },
+      { name: "Résolution de problèmes", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.soft.problem.desc" },
+      { name: "Apprentissage autonome", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.soft.learning.desc" },
+      { name: "Gestion de projets", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.soft.project.desc" },
+      { name: "Curiosité technique", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.soft.curiosity.desc" },
     ],
   },
 ];

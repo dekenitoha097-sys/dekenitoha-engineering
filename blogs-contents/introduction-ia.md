@@ -1,52 +1,49 @@
 ---
-title: "Introduction à l'Intelligence Artificielle"
-titleEn: "Introduction to Artificial Intelligence"
-date: "2025-02-10"
-excerpt: "Les fondamentaux de l'IA expliqués simplement : machine learning, deep learning, et leurs applications concrètes dans le monde réel."
-excerptEn: "AI fundamentals explained simply: machine learning, deep learning, and their real-world applications."
-tags: ["IA", "Machine Learning", "Python"]
-readTime: 8
-coverColor: "#a855f7"
+title: "Mon Introduction à l'Intelligence Artificielle"
+titleEn: "My Introduction to Artificial Intelligence"
+description: "Un retour sur mon parcours dinitiation à l'IA et les concepts qui m'ont le plus marqué."
+descriptionEn: "A look back at my journey into AI and the concepts that struck me the most."
+excerpt: "Partagez mon parcours d'initiation à l'intelligence artificielle et les concepts fondamentaux que j'ai découverts."
+excerptEn: "Share my journey of introduction to artificial intelligence and the fundamental concepts I discovered."
+date: "2024-01-10"
+tags: ["AI", "Machine Learning", "Technology"]
+coverColor: "#8b5cf6"
+readTime: 5
 ---
 
-# Introduction à l'Intelligence Artificielle
+![Image d'introduction à l'IA](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZWxsaWdlbmNlJTIwYXJ0aWZpY2lhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60)   
 
-L'intelligence artificielle est partout. De la recommandation Netflix à l'assistant vocal de votre téléphone, l'IA transforme notre quotidien.
+# Mon Introduction à l'Intelligence Artificielle
 
+L'intelligence artificielle a toujours été un domaine qui m'intrigue. Aujourd'hui, je partage mon parcours d'initiation et les concepts clés que j'ai découverts.
 
-## Machine Learning vs Deep Learning
+## Comment tout a commencé
 
-Le **Machine Learning** est une branche de l'IA où les algorithmes apprennent à partir de données. Le **Deep Learning** est un sous-ensemble du ML qui utilise des réseaux de neurones profonds.
+Mon premier contact avec l'IA s'est fait à travers les assistants vocaux et les recommandations Spotify. Je me suis demandé : comment ces systèmes peuvent-ils comprendre mes préférences ?
 
-### Types d'apprentissage
+## Les Concepts Fondamentaux
 
-- **Supervisé** : On fournit des exemples étiquetés (classification, régression)
-- **Non supervisé** : L'algorithme trouve des patterns seul (clustering)
-- **Par renforcement** : L'agent apprend par essai-erreur (jeux, robotique)
+### Le Machine Learning
 
-## Un exemple concret avec Python
+Le Machine Learning est un sous-ensemble de l'IA où les ordinateurs appriennent à partir de données.
 
-```python
-import tensorflow as tf
-from tensorflow import keras
+### Le Deep Learning
 
-model = keras.Sequential([
-    keras.layers.Dense(128, activation='relu'),
-    keras.layers.Dense(10, activation='softmax')
-])
+Le Deep Learning utilise des réseaux de neurones artificiels pour traiter des données complexes comme les images et le langage naturel.
 
-model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
-```
+### Les Types d'Apprentissage
 
-## Applications dans le monde réel
+1. **Apprentissage supervisé** : L'algorithme apprend à partir de données étiquetées
+2. **Apprentissage non supervisé** : L'algorithme trouve des patterns dans des données non étiquetées
+3. **Apprentissage par renforcement** : L'agent learns par trial and error
 
-- **Santé** : Diagnostic médical assisté par IA
-- **Finance** : Détection de fraude en temps réel
-- **Transport** : Véhicules autonomes
-- **Éducation** : Apprentissage personnalisé
+## Mes Premiers Projets
+
+J'ai commencé par des projets simples :
+- Classification d'images basique
+- Prédiction de valeurs numériques
+- Analyse de sentiments sur des textes
 
 ## Conclusion
 
-L'IA n'est plus de la science-fiction. En tant qu'étudiant en informatique et IA, je suis convaincu que comprendre ces technologies est essentiel pour tout développeur moderne.
+L'IA est un domaine fascinant en constante évolution. Ce n'est que le début de mon aventure !

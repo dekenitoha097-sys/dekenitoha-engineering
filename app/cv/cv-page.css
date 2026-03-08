@@ -91,7 +91,7 @@
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main, #fff);
+  color: var(--text-main, #000000);
   margin-bottom: 0.25rem;
 }
 
@@ -270,6 +270,29 @@
 .cv-section:hover .cv-skill-tag {
   border-color: rgba(96, 165, 250, 0.2);
   color: var(--text-main, #fff);
+}
+
+/* --- Soft Skills --- */
+.cv-softskills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cv-softskill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-main, #fff);
+  line-height: 1.4;
+}
+
+.cv-softskill-bullet {
+  color: #22c55e;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 /* --- Languages --- */
@@ -765,5 +788,14 @@
   .cv-section:hover .cv-interest-tag {
     background: #dbeafe !important;
     border-color: transparent !important;
+  }
+
+  /* ---- Soft Skills ---- */
+  .cv-softskill-item {
+    color: #1e293b !important;
+  }
+
+  .cv-softskill-bullet {
+    color: #1e293b !important;
   }
 }

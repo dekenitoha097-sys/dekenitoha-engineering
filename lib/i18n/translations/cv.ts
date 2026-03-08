@@ -8,11 +8,11 @@ const cv = {
     "cv.name": "DEKENI Toha",
     "cv.role": "Etudiant en 2eme annee d'Ingenierie Informatique et IA",
     "cv.location": "Casablanca, Maroc",
-    "cv.email": "dekenitoha097@gmail.com",
+    "cv.email": "t.dekeni@hestim.ma",
     "cv.phone": "+228 724-477160",
     "cv.profile.title": "Profil",
     "cv.profile.text":
-      "Etudiant en 2eme annee d'Ingenierie Informatique et Intelligence Artificielle a HESTIM Casablanca, je developpe des solutions web modernes, robustes et utiles. Mon positionnement combine vision produit, resolution de problemes et progression continue vers un profil d'ingenieur complet.",
+      "Étudiant en informatique, passionné par la cybersécurité, le développement logiciel, l’IA et la création de projets techniques. Je possède des compétences en développement web, en programmation et en analyse de données. Motivé par l’apprentissage continu, j’aime résoudre des problèmes techniques et travailler de manière autonome ou en équipe.",
 
     "cv.education.title": "Formation",
     "cv.education.1.period": "2025 - 2026 (En cours)",
@@ -32,16 +32,23 @@ const cv = {
       "Baccalaureat scientifique obtenu a Sokode (Togo) avec Mention Bien.",
 
     "cv.experience.title": "Experience",
-    "cv.experience.1.period": "2023 - Present",
-    "cv.experience.1.role": "Developpeur Web (Projets Personnels)",
+    "cv.experience.1.period": "2024 - Present",
+    "cv.experience.1.role": "Développeur Web – Projets Personnels",
     "cv.experience.1.company": "Portfolio & Projets Techniques",
     "cv.experience.1.tasks":
-      "Conception de projets web modernes avec React et Next.js|Mise en place d'architectures front-end propres et maintenables|Integration d'API et de bases de donnees sur projets d'apprentissage|Amelioration continue de la qualite de code et de la performance",
+      "Conception et développement de projets web modernes incluant un portfolio personnel, une plateforme e-commerce et un dashboard analytics|Développement d'interfaces frontend responsives avec Next.js et React|Mise en place de systèmes d'authentification et de visualisation de données|Gestion de bases de données dans des projets d'apprentissage|Optimisation des performances et de l'expérience utilisateur",
+
     "cv.experience.2.period": "2025",
-    "cv.experience.2.role": "Projet Academique - Plateforme IA",
-    "cv.experience.2.company": "HESTIM Casablanca",
+    "cv.experience.2.role": "Projets Académiques – Développement Logiciel et IoT",
+    "cv.experience.2.company": "Projet scolaire",
     "cv.experience.2.tasks":
-      "Developpement d'un outil de classification d'images avec TensorFlow|Creation de l'interface web avec React|Travail en equipe avec methode de suivi academique",
+      "Développement d'un jeu de mémoire interactif avec système de score et base de données SQLite3|Réalisation d'un projet IoT de capteur de température et d'humidité avec collecte et stockage des données|Traitement des données de capteurs pour visualisation simple|Conception d'applications pédagogiques pour la pratique des technologies embarquées",
+
+    "cv.experience.3.period": "2025-2026",
+    "cv.experience.3.role": "Projet Personnel – Développement Jeux Vidéo et Librairies C++",
+    "cv.experience.3.company": "Projet individuel",
+    "cv.experience.3.tasks":
+      "Développement d'un jeu Breakout en C++ avec 30 niveaux progressifs, incluant gestion du son, du menu principal et des paramètres de difficulté|Conception et développement d'une librairie C++ personnalisée pour Raylib permettant la gestion des sprites 2D, des animations, de la physique avec Box2D et d'un système de caméra 2D réutilisable|Amélioration des compétences en algorithmique, programmation bas niveau et architecture logicielle|Création d'outils modulaires pour le développement de jeux 2D",
 
     "cv.skills.title": "Competences Techniques",
     "cv.skills.languages": "Langages",
@@ -50,13 +57,16 @@ const cv = {
     "cv.skills.tools": "Outils & DevOps",
     "cv.skills.ai": "Intelligence Artificielle",
 
+    "cv.softskills.title": "Soft Skills",
+    "cv.softskills.list": "Travail en equipe|Communication|Resolution de problemes|Capacite d'apprentissage autonome|Gestion de projets personnels|Curiosite technique et veille technologique",
+
     "cv.languages.title": "Langues",
     "cv.languages.fr": "Francais - Langue maternelle",
-    "cv.languages.en": "Anglais - Professionnel",
+    "cv.languages.en": "Anglais ",
 
     "cv.interests.title": "Centres d'Interet",
     "cv.interests.list":
-      "Innovation technologique|Open source & communaute dev|Intelligence artificielle|Design UI/UX",
+      "Cybersecurite|Innovation technologique|Open source & communaute dev|Intelligence artificielle|Design UI/UX|Dessin|Modelisation 3D",
   },
   en: {
     "cv.eyebrow": "CURRICULUM VITAE",
@@ -71,7 +81,7 @@ const cv = {
     "cv.phone": "+228 724-477160",
     "cv.profile.title": "Profile",
     "cv.profile.text":
-      "2nd-year Computer Science and Artificial Intelligence engineering student at HESTIM Casablanca, I build modern, robust, and useful web solutions. My positioning combines product vision, problem solving, and continuous progress toward a complete engineering profile.",
+      "Computer science student with a passion for cybersecurity, software development, AI, and creating technical projects. I have skills in web development, programming, and data analysis. Motivated by continuous learning, I enjoy solving technical problems and working independently or in teams.",
 
     "cv.education.title": "Education",
     "cv.education.1.period": "2025 - 2026 (Current)",
@@ -91,16 +101,24 @@ const cv = {
       "Scientific baccalaureate obtained in Sokode (Togo) with Honors (Mention Bien).",
 
     "cv.experience.title": "Experience",
-    "cv.experience.1.period": "2023 - Present",
+    "cv.experience.1.period": "2024 - Present",
     "cv.experience.1.role": "Web Developer (Personal Projects)",
     "cv.experience.1.company": "Portfolio & Technical Projects",
     "cv.experience.1.tasks":
       "Built modern web projects with React and Next.js|Implemented clean and maintainable front-end architectures|Integrated APIs and databases in learning projects|Continuously improved code quality and performance",
+
     "cv.experience.2.period": "2025",
-    "cv.experience.2.role": "Academic Project - AI Platform",
-    "cv.experience.2.company": "HESTIM Casablanca",
+    "cv.experience.2.role": "Academic Projects – Software Development and IoT",
+    "cv.experience.2.company": "School Project",
     "cv.experience.2.tasks":
-      "Developed an image classification tool with TensorFlow|Built the web interface with React|Collaborated in team projects with structured academic follow-up",
+      "Developed an interactive memory game with scoring system and SQLite3 database|Implemented an IoT project for temperature and humidity monitoring with data collection|Processed sensor data for simple visualization|Designed educational applications for embedded technology practice",
+
+    "cv.experience.3.period": "2025-2026",
+    "cv.experience.3.role": "Personal Project – Video Game Development and C++ Libraries",
+    "cv.experience.3.company": "Individual Project",
+    "cv.experience.3.tasks":
+      "Developed a Breakout game in C++ with 30 progressive levels, including sound management, main menu, and difficulty settings|Designed and developed a custom C++ library for Raylib enabling 2D sprite management, animations, physics with Box2D, and reusable 2D camera system|Enhanced skills in algorithms, low-level programming, and software architecture|Created modular tools for 2D game development",
+
 
     "cv.skills.title": "Technical Skills",
     "cv.skills.languages": "Languages",
@@ -109,13 +127,16 @@ const cv = {
     "cv.skills.tools": "Tools & DevOps",
     "cv.skills.ai": "Artificial Intelligence",
 
+    "cv.softskills.title": "Soft Skills",
+    "cv.softskills.list": "Teamwork|Communication|Problem-solving|Self-directed learning|Personal project management|Technical curiosity & continuous learning",
+
     "cv.languages.title": "Languages",
     "cv.languages.fr": "French - Native",
     "cv.languages.en": "English - Professional",
 
     "cv.interests.title": "Interests",
     "cv.interests.list":
-      "Technological innovation|Open source & dev community|Artificial intelligence|UI/UX Design",
+      "Cybersecurity|Technological innovation|Open source & dev community|Artificial intelligence|UI/UX Design|Drawing|3D Modeling",
   },
 } as const;
 

@@ -11,6 +11,7 @@ const skills = {
     "skills.cat.ai": "IA & Data",
     "skills.cat.db": "Bases de Donnees",
     "skills.cat.tools": "Outils & Environnement",
+    "skills.cat.soft": "Soft Skills",
 
     "skillsPage.eyebrow": "COMPETENCES TECHNIQUES",
     "skillsPage.title": "Mon Arsenal",
@@ -42,9 +43,9 @@ const skills = {
     "skillsPage.web.css.desc": "Responsive design, layouts et animations.",
 
     "skillsPage.ai.title": "Intelligence Artificielle & Data",
-    "skillsPage.ai.tf.desc": "Bases de modelisation et entrainement avec TensorFlow.",
-    "skillsPage.ai.ml.desc": "Bases en machine learning applique.",
-    "skillsPage.ai.data.desc": "Bases de nettoyage et d'analyse de donnees.",
+    "skillsPage.ai.tf.desc": "Bases de modelisation et entrainement avec.",
+    "skillsPage.ai.ml.desc": "Bases en machine learning applique (Scikit-learn).",
+    "skillsPage.ai.data.desc": "Bases de nettoyage et d'analyse de donnees (Pandas, NumPy, SymPy).",
 
     "skillsPage.db.title": "Bases de Donnees",
     "skillsPage.db.pg.desc": "Modelisation relationnelle et requetes SQL avancees.",
@@ -57,6 +58,14 @@ const skills = {
     "skillsPage.tools.linux.desc": "Utilisation quotidienne terminal et commandes systeme.",
     "skillsPage.tools.vscode.desc": "Workflow de developpement et configuration avancee.",
     "skillsPage.tools.figma.desc": "Prototypage UI/UX et collaboration design-dev.",
+
+    "skillsPage.soft.title": "Soft Skills",
+    "skillsPage.soft.teamwork.desc": "Collaboration efficace en équipe, partage de connaissances.",
+    "skillsPage.soft.communication.desc": "Expression claire, écoute active et vulgarisation technique.",
+    "skillsPage.soft.problem.desc": "Analyse méthodique et solutions créatives aux défis techniques.",
+    "skillsPage.soft.learning.desc": "Autonomie dans l'acquisition de nouvelles compétences.",
+    "skillsPage.soft.project.desc": "Planification, exécution et suivi de projets techniques.",
+    "skillsPage.soft.curiosity.desc": "Veille technologique et intérêt pour les nouvelles technologies.",
   },
   en: {
     "skills.eyebrow": "SKILLS",
@@ -70,6 +79,7 @@ const skills = {
     "skills.cat.ai": "AI & Data",
     "skills.cat.db": "Databases",
     "skills.cat.tools": "Tools & Environment",
+    "skills.cat.soft": "Soft Skills",
 
     "skillsPage.eyebrow": "TECHNICAL SKILLS",
     "skillsPage.title": "My Technical",
@@ -116,6 +126,14 @@ const skills = {
     "skillsPage.tools.linux.desc": "Daily terminal and system command usage.",
     "skillsPage.tools.vscode.desc": "Advanced workflow and development setup.",
     "skillsPage.tools.figma.desc": "UI/UX prototyping and design-dev collaboration.",
+
+    "skillsPage.soft.title": "Soft Skills",
+    "skillsPage.soft.teamwork.desc": "Effective team collaboration and knowledge sharing.",
+    "skillsPage.soft.communication.desc": "Clear expression, active listening, and technical explanation.",
+    "skillsPage.soft.problem.desc": "Methodical analysis and creative solutions to technical challenges.",
+    "skillsPage.soft.learning.desc": "Self-directed learning and acquiring new skills autonomously.",
+    "skillsPage.soft.project.desc": "Planning, execution, and tracking of technical projects.",
+    "skillsPage.soft.curiosity.desc": "Tech curiosity and keeping up with new technologies.",
   },
 } as const;
 

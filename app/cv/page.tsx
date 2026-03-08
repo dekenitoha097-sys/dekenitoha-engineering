@@ -35,6 +35,14 @@ const experiences = [
     companyKey: "cv.experience.2.company",
     tasksKey: "cv.experience.2.tasks",
   },
+  {
+    periodKey: "cv.experience.3.period",
+    roleKey: "cv.experience.3.role",
+    companyKey: "cv.experience.3.company",
+    tasksKey: "cv.experience.3.tasks",
+  },
+
+
 ];
 
 // 🎓 Formations — Ajoute ou supprime des objets dans cette liste
@@ -63,9 +71,9 @@ const educations = [
 const techSkills = {
   languages: ["C", "C++", "Python", "TypeScript", "JavaScript", "Rust", "SQL"],
   frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Framer Motion", "Prisma"],
-  databases: ["PostgreSQL", "SQL"],
+  databases: ["PostgreSQL", "SQL","Mysql"],
   tools: ["Git", "Docker", "Linux", "VS Code", "Figma"],
-  ai: ["TensorFlow", "Machine Learning", "Data Analysis"],
+  ai: ["Machine Learning (scikit-learn)", "Analyse de données (pandas, numpy, seaborn)", "Mathématiques symboliques (sympy)"],
 };
 
 // 🌐 Langues — Ajoute des clés de traduction ici
@@ -82,7 +90,7 @@ export default function CVPage() {
 
   const handleDownloadPDF = async () => {
     if (!cvRef.current) return;
-    
+
     // Track CV download
     trackCvDownload();
 
@@ -303,6 +311,23 @@ export default function CVPage() {
                     </div>
                   </div>
                 ))}
+              </section>
+
+              {/* Soft Skills */}
+              <section className="cv-section">
+                <h3 className="cv-section-title">
+                  {t("cv.softskills.title" as TranslationKey)}
+                </h3>
+                <div className="cv-softskills-list">
+                  {t("cv.softskills.list" as TranslationKey)
+                    .split("|")
+                    .map((skill, idx) => (
+                      <div key={idx} className="cv-softskill-item">
+                        <span className="cv-softskill-bullet">•</span>
+                        <span>{skill}</span>
+                      </div>
+                    ))}
+                </div>
               </section>
 
               {/* Languages */}
