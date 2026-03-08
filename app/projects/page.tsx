@@ -90,9 +90,9 @@ const projectsList: Project[] = [
     titleFr: "Plateforme E-Commerce Full Stack",
     titleEn: "Full Stack E-Commerce Platform",
     descFr:
-      "Application e-commerce moderne développée avec Next.js, intégrant un système de paiement sécurisé, une gestion dynamique des produits, un panier interactif et une expérience utilisateur optimisée. Architecture performante avec rendu hybride (SSR/CSR) et interface responsive.",
+      "Application e-commerce moderne développée avec Next.js, intégrant une gestion dynamique des produits, un panier interactif et une expérience utilisateur optimisée. Architecture performante avec rendu hybride (SSR/CSR) et interface responsive.",
     descEn:
-      "Modern e-commerce application developed with Next.js, featuring secure payment system, dynamic product management, interactive cart and optimized user experience. Performant architecture with hybrid rendering (SSR/CSR) and responsive interface.",
+      "Modern e-commerce application developed with Next.js, featuring dynamic product management, interactive cart and optimized user experience. Performant architecture with hybrid rendering (SSR/CSR) and responsive interface.",
     domain: "web",
     lang: "typescript",
     techs: ["Next.js", "TypeScript", "Tailwind"],
@@ -103,33 +103,31 @@ const projectsList: Project[] = [
     color: "#0070f3",
     images: ["/projects/ecommerce.png"],
     featuresFr: [
-      "Système de paiement sécurisé Stripe intégré",
       "Gestion dynamique des produits avec inventaire",
       "Panier interactif avec sauvegarde locale",
       "Authentication utilisateurs avec NextAuth",
       "Interface responsive mobile-first"
     ],
     featuresEn: [
-      "Secure Stripe payment system integration",
       "Dynamic product management with inventory",
       "Interactive cart with local storage",
       "User authentication with NextAuth",
       "Mobile-first responsive interface"
     ],
-    resultsFr: ["Paiement fonctionnel", "Gestion produits complète", "Interface responsive"],
-    resultsEn: ["Working payment system", "Complete product management", "Responsive interface"]
+    resultsFr: ["Gestion produits complète", "Interface responsive", "Authentication fonctionnelle"],
+    resultsEn: ["Complete product management", "Responsive interface", "Working authentication"]
   },
   {
     id: "quizhub",
     titleFr: "QuizHub – Application Interactive",
     titleEn: "QuizHub – Interactive Application",
     descFr:
-      "Application web interactive permettant aux utilisateurs de répondre à des quiz dynamiques avec sauvegarde des scores en temps réel. Intégration Firebase pour l'authentification et la gestion des données, interface moderne et expérience fluide optimisée pour mobile et desktop.",
+      "Application web interactive permettant aux utilisateurs de répondre à des quiz dynamiques avec sauvegarde des scores en temps réel. Backend API personnalisé avec Node.js et Express pour la gestion des données, interface moderne et expérience fluide optimisée pour mobile et desktop.",
     descEn:
-      "Interactive web application allowing users to answer dynamic quizzes with real-time score saving. Firebase integration for authentication and data management, modern interface and fluid experience optimized for mobile and desktop.",
+      "Interactive web application allowing users to answer dynamic quizzes with real-time score saving. Custom API backend with Node.js and Express for data management, modern interface and fluid experience optimized for mobile and desktop.",
     domain: "web",
     lang: "typescript",
-    techs: ["React", "Firebase", "Expo"],
+    techs: ["React", "TypeScript", "Node.js", "Express"],
     github: "https://github.com/dekenitoha097-sys/quizhub",
     demo: "https://quizhub-kappa.vercel.app/quiz",
     featured: true,
@@ -138,20 +136,20 @@ const projectsList: Project[] = [
     images: ["/projects/quiz_app.png","/projects/quiz_app1.png","/projects/quiz_app2.png"],
     featuresFr: [
       "Quiz dynamiques avec questions variées",
-      "Sauvegarde des scores en temps réel Firebase",
-      "Authentication Firebase (Google, Email)",
+      "API backend Node.js Express avec sauvegarde en temps réel",
+      "Authentication personnalisé avec JWT",
       "Classements et statistiques joueurs",
       "Design responsive mobile et desktop"
     ],
     featuresEn: [
       "Dynamic quizzes with varied questions",
-      "Real-time score saving with Firebase",
-      "Firebase authentication (Google, Email)",
+      "Node.js Express backend API with real-time saving",
+      "Custom authentication with JWT",
       "Player rankings and statistics",
       "Responsive design for mobile and desktop"
     ],
-    resultsFr: ["Application fonctionnelle", "Classements en temps réel", "Authentification working"],
-    resultsEn: ["Working application", "Real-time leaderboards", "Working authentication"]
+    resultsFr: ["Application fonctionnelle", "API backend personnalisée", "Classements en temps réel"],
+    resultsEn: ["Working application", "Custom backend API", "Real-time leaderboards"]
   },
   {
     id: "dashboard-analytics",
