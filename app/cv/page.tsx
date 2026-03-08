@@ -15,7 +15,7 @@ import "./cv-page.css";
 
 // 🧑 Infos personnelles
 const personalInfo = {
-  photo: "/toha1.png",
+  photo: "/image.png",
   portfolio: "https://dekenitoha-engineering.vercel.app/",
   github: "https://github.com/dekenitoha097-sys/",
   linkedin: "https://www.linkedin.com/in/toha-dekeni-9b0599356/",
@@ -69,7 +69,7 @@ const educations = [
 
 // 🛠️ Compétences techniques — Ajoute des catégories ou des techs
 const techSkills = {
-  languages: ["C", "C++", "Python", "TypeScript", "JavaScript", "Rust", "SQL"],
+  languages: ["C", "C++", "Python", "TypeScript", "JavaScript", "Rust", "SQL","java"],
   frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Framer Motion", "Prisma"],
   databases: ["PostgreSQL", "SQL","Mysql"],
   tools: ["Git", "Docker", "Linux", "VS Code", "Figma"],
@@ -180,7 +180,7 @@ export default function CVPage() {
                 src={personalInfo.photo}
                 alt={t("cv.name" as TranslationKey)}
                 width={180}
-                height={180}
+                height={200}
                 className="cv-photo-img"
               />
             </div>

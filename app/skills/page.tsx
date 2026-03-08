@@ -31,7 +31,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Python (scripting avance)", icon: "devicon-python-plain colored", level: "advanced", descKey: "skillsPage.software.python.desc" },
       { name: "TypeScript", icon: "devicon-typescript-plain colored", level: "advanced", descKey: "skillsPage.software.ts.desc" },
       { name: "Rust", icon: "devicon-rust-original", level: "learning", descKey: "skillsPage.software.rust.desc" },
-      { name: "Java", icon: "devicon-java-plain colored", level: "learning", descKey: "skillsPage.software.java.desc" },
+      { name: "Java", icon: "devicon-java-plain colored", level: "intermediate", descKey: "skillsPage.software.java.desc" },
       { name: "Algorithmique", icon: "devicon-thealgorithms-plain", level: "intermediate", descKey: "skillsPage.software.algo.desc" },
     ],
   },
