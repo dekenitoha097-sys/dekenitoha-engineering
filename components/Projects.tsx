@@ -52,7 +52,7 @@ const projectsList = [
     descFr: "Application web interactive avec quiz dynamiques, sauvegarde des scores Firebase.",
     descEn: "Interactive web application with dynamic quizzes, Firebase score saving.",
     category: "web",
-    techs: ["React", "Firebase", "Expo"],
+    techs: ["React", "TypeScript", "Node.js", "Express"],
     images:  ["/projects/quiz_app.png","/projects/quiz_app1.png","/projects/quiz_app2.png"],
     github: "https://github.com/dekenitoha097-sys/quizhub",
     demo: "https://quizhub-kappa.vercel.app/quiz",
