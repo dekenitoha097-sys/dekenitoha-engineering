@@ -54,9 +54,9 @@ const skillCategories: SkillCategory[] = [
       { name: "Machine Learning", icon: "devicon-python-plain colored", level: "intermediate", descKey: "skillsPage.ai.ml.desc" },
       { name: "Scikit-learn", icon: "devicon-python-plain colored", level: "beginner", descKey: "skillsPage.ai.sklearn.desc" },
       { name: "Data Analysis", icon: "devicon-pandas-plain", level: "beginner", descKey: "skillsPage.ai.data.desc" },
-      { name: "NumPy", icon: "devicon-numpy-plain", level: "intermediate", descKey: "skillsPage.ai.numpy.desc" },
-      { name: "Pandas", icon: "devicon-pandas-plain", level: "intermediate", descKey: "skillsPage.ai.pandas.desc" },
-      { name: "Matplotlib", icon: "devicon-matplotlib-plain", level: "intermediate", descKey: "skillsPage.ai.matplotlib.desc" },
+      { name: "NumPy", icon: "devicon-numpy-plain", level: "advanced", descKey: "skillsPage.ai.numpy.desc" },
+      { name: "Pandas", icon: "devicon-pandas-plain", level: "advanced", descKey: "skillsPage.ai.pandas.desc" },
+      { name: "Matplotlib", icon: "devicon-matplotlib-plain", level: "advanced", descKey: "skillsPage.ai.matplotlib.desc" },
     ],
   },
   {

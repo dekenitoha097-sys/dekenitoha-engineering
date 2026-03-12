@@ -1,12 +1,21 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
 import { Download, Printer, MapPin, Mail, Phone, Github, Linkedin, Globe } from "lucide-react";
 import { trackCvDownload, trackCvPrint, trackGithubVisit } from "@/lib/analytics";
 import Image from "next/image";
+import {
+  cvExperiencesByCategory,
+  cvProjectsByCategory,
+  cvSkillsByCategory,
+  type CvCategory,
+  type CvSkillGroupKey,
+  type LocalizedList,
+  type LocalizedText,
+} from "./cv-data";
 import "./cv-page.css";
 
 // =============================================
@@ -21,29 +30,8 @@ const personalInfo = {
   linkedin: "https://www.linkedin.com/in/toha-dekeni-9b0599356/",
 };
 
-// 💼 Expériences — Ajoute ou supprime des objets dans cette liste
-const experiences = [
-  {
-    periodKey: "cv.experience.1.period",
-    roleKey: "cv.experience.1.role",
-    companyKey: "cv.experience.1.company",
-    tasksKey: "cv.experience.1.tasks",
-  },
-  {
-    periodKey: "cv.experience.2.period",
-    roleKey: "cv.experience.2.role",
-    companyKey: "cv.experience.2.company",
-    tasksKey: "cv.experience.2.tasks",
-  },
-  {
-    periodKey: "cv.experience.3.period",
-    roleKey: "cv.experience.3.role",
-    companyKey: "cv.experience.3.company",
-    tasksKey: "cv.experience.3.tasks",
-  },
-
-
-];
+// 💼 Experiences — Voir app/cv/cv-data.ts
+ 
 
 // 🎓 Formations — Ajoute ou supprime des objets dans cette liste
 const educations = [
@@ -67,26 +55,36 @@ const educations = [
   },
 ];
 
-// 🛠️ Compétences techniques — Ajoute des catégories ou des techs
-const techSkills = {
-  languages: ["C", "C++", "Python", "TypeScript", "JavaScript", "Rust", "SQL","java"],
-  frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Framer Motion", "Prisma"],
-  databases: ["PostgreSQL", "SQL","Mysql"],
-  tools: ["Git", "Docker", "Linux", "VS Code", "Figma"],
-  ai: ["Machine Learning (scikit-learn)", "Analyse de données (pandas, numpy, seaborn)", "Mathématiques symboliques (sympy)"],
-};
-
 // 🌐 Langues — Ajoute des clés de traduction ici
 const spokenLanguages = [
   "cv.languages.fr",
   "cv.languages.en",
 ];
 
+const categoryOptions: { id: CvCategory; labelKey: string }[] = [
+  { id: "general", labelKey: "cv.category.general" },
+  { id: "web", labelKey: "cv.category.web" },
+  { id: "ai", labelKey: "cv.category.ai" },
+  { id: "games", labelKey: "cv.category.games" },
+];
+
+const skillGroupOrder: CvSkillGroupKey[] = ["languages", "frameworks", "databases", "tools", "ai"];
+
 // =============================================
 
 export default function CVPage() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const cvRef = useRef<HTMLDivElement>(null);
+  const [activeCategory, setActiveCategory] = useState<CvCategory>("general");
+
+  const isFr = locale === "fr";
+  const getText = (text: LocalizedText) => (isFr ? text.fr : text.en);
+  const getList = (list: LocalizedList) => (isFr ? list.fr : list.en);
+
+  const experiences = cvExperiencesByCategory[activeCategory];
+  const projects = cvProjectsByCategory[activeCategory];
+  const skills = cvSkillsByCategory[activeCategory];
+  const visibleSkillGroups = skillGroupOrder.filter((key) => skills[key]?.length > 0);
 
   const handleDownloadPDF = async () => {
     if (!cvRef.current) return;
@@ -125,7 +123,7 @@ export default function CVPage() {
     await html2pdf()
       .set({
         margin: 0,
-        filename: "CV_DEKENI_Toha.pdf",
+        filename: `CV_DEKENI_Toha_${activeCategory}.pdf`,
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
@@ -167,6 +165,23 @@ export default function CVPage() {
                 <Printer size={18} />
                 {t("cv.print" as TranslationKey)}
               </button>
+            </div>
+            <div className="cv-category-switch">
+              <span className="cv-category-label">
+                {t("cv.category.label" as TranslationKey)}
+              </span>
+              <div className="cv-category-buttons">
+                {categoryOptions.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className={`cv-category-btn ${activeCategory === option.id ? "cv-category-btn--active" : ""}`}
+                    onClick={() => setActiveCategory(option.id)}
+                  >
+                    {t(option.labelKey as TranslationKey)}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -241,26 +256,54 @@ export default function CVPage() {
                     <div className="cv-entry-header">
                       <div>
                         <h4 className="cv-entry-title">
-                          {t(exp.roleKey as TranslationKey)}
+                          {getText(exp.role)}
                         </h4>
                         <span className="cv-entry-org">
-                          {t(exp.companyKey as TranslationKey)}
+                          {getText(exp.company)}
                         </span>
                       </div>
                       <span className="cv-entry-period">
-                        {t(exp.periodKey as TranslationKey)}
+                        {getText(exp.period)}
                       </span>
                     </div>
                     <ul className="cv-entry-tasks">
-                      {t(exp.tasksKey as TranslationKey)
-                        .split("|")
-                        .map((task, idx) => (
-                          <li key={idx}>{task}</li>
-                        ))}
+                      {getList(exp.tasks).map((task, idx) => (
+                        <li key={idx}>{task}</li>
+                      ))}
                     </ul>
                   </div>
                 ))}
               </section>
+
+              {/* Projects */}
+              {projects.length > 0 && (
+                <section className="cv-section">
+                  <h3 className="cv-section-title">
+                    {t("cv.projects.title" as TranslationKey)}
+                  </h3>
+                  {projects.map((project, i) => (
+                    <div key={`${project.title.en}-${i}`} className="cv-entry cv-project-entry">
+                      <div className="cv-entry-header">
+                        <div>
+                          <h4 className="cv-entry-title">
+                            {getText(project.title)}
+                          </h4>
+                        </div>
+                      </div>
+                      <p className="cv-entry-desc">
+                        {getText(project.description)}
+                      </p>
+                      <div className="cv-project-techs">
+                        {project.techs.map((tech) => (
+                          <span key={tech} className="cv-project-tech">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </section>
+              )}
 
               {/* Education */}
               <section className="cv-section">
@@ -297,13 +340,13 @@ export default function CVPage() {
                 <h3 className="cv-section-title">
                   {t("cv.skills.title" as TranslationKey)}
                 </h3>
-                {(Object.keys(techSkills) as (keyof typeof techSkills)[]).map((key) => (
+                {visibleSkillGroups.map((key) => (
                   <div key={key} className="cv-skill-group">
                     <h4 className="cv-skill-group-title">
                       {t(`cv.skills.${key}` as TranslationKey)}
                     </h4>
                     <div className="cv-skill-tags">
-                      {techSkills[key].map((tech) => (
+                      {skills[key].map((tech) => (
                         <span key={tech} className="cv-skill-tag">
                           {tech}
                         </span>

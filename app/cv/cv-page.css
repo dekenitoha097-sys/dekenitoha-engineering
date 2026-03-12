@@ -47,6 +47,52 @@
   cursor: pointer;
 }
 
+.cv-category-switch {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cv-category-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted, #888);
+}
+
+.cv-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.cv-category-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.12));
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted, #888);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cv-category-btn:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  color: var(--text-main, #fff);
+}
+
+.cv-category-btn--active {
+  color: #fff;
+  border-color: rgba(96, 165, 250, 0.6);
+  background: rgba(96, 165, 250, 0.15);
+  box-shadow: 0 0 18px rgba(96, 165, 250, 0.2);
+}
+
 /* --- CV Document --- */
 .cv-document {
   max-width: 900px;
@@ -230,6 +276,24 @@
   color: var(--text-muted, #888);
   font-size: 0.85rem;
   line-height: 1.6;
+}
+
+.cv-project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+.cv-project-tech {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(96, 165, 250, 0.08);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  color: var(--accent, #60a5fa);
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 /* --- Sidebar Skills --- */
@@ -424,6 +488,15 @@
   .cv-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .cv-category-buttons {
+    width: 100%;
+  }
+
+  .cv-category-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .cv-doc-header {
@@ -710,6 +783,21 @@
     color: #475569 !important;
     font-size: 0.8rem !important;
     line-height: 1.55 !important;
+  }
+
+  .cv-project-techs {
+    gap: 0.2rem !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .cv-project-tech {
+    color: #1e293b !important;
+    background: #e2e8f0 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 5px !important;
+    padding: 0.15rem 0.5rem !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
   }
 
   .cv-entry-tasks {
