@@ -44,6 +44,15 @@ const certsList = [
     platform: "Coursera",
     color: "#f97316",
   },
+  {
+    id: 5,
+    title: "JavaScript Essentials",
+    titleEn: "JavaScript Essentials",
+    image: "/courcera-certificats/javascript_cisco.png",
+    link: "/courcera-certificats/javascript_cisco.png",
+    platform: "Cisco",
+    color: "#0ea5e9",
+  },
 ];
 
 const CORRECT_PASSWORD = "To70ha22@";

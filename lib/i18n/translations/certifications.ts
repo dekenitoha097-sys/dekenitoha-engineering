@@ -46,6 +46,12 @@ const certifications = {
     "cert.4.desc":
       "Méthodologies de gestion de projet : planification, exécution, suivi, méthodologies Agile/Scrum et outils de gestion d'équipe.",
     "cert.4.date": "2024",
+
+    "cert.5.title": "JavaScript Essentials",
+    "cert.5.issuer": "Cisco",
+    "cert.5.desc":
+      "Fondamentaux JavaScript : syntaxe, variables, fonctions, tableaux, objets et bonnes pratiques.",
+    "cert.5.date": "2024",
   },
   en: {
     // --- Section Homepage ---
@@ -92,6 +98,12 @@ const certifications = {
     "cert.4.desc":
       "Project management methodologies: planning, execution, monitoring, Agile/Scrum methodologies and team management tools.",
     "cert.4.date": "2024",
+
+    "cert.5.title": "JavaScript Essentials",
+    "cert.5.issuer": "Cisco",
+    "cert.5.desc":
+      "JavaScript fundamentals: syntax, variables, functions, arrays, objects, and best practices.",
+    "cert.5.date": "2024",
   },
 };
 

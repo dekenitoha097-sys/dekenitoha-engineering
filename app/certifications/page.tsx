@@ -37,6 +37,13 @@ const certsList = [
     platform: "Coursera",
     color: "#f97316",
   },
+  {
+    id: 5,
+    image: "/courcera-certificats/javascript_cisco.png",
+    link: "/courcera-certificats/javascript_cisco.png",
+    platform: "Cisco",
+    color: "#0ea5e9",
+  },
 ];
 
 export default function CertificationsPage() {

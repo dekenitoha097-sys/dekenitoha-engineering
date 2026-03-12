@@ -12,6 +12,7 @@ const certsList = [
   { id: 2, image: "/courcera-certificats/communication.png", link: "https://www.coursera.org/account/accomplishments/verify/TXT97Q2TQGNO" },
   { id: 3, image: "/courcera-certificats/network_and_security.png", link: "https://www.coursera.org/account/accomplishments/verify/IW89T3BPL73V" },
   { id: 4, image: "/courcera-certificats/project_management.png", link: "https://www.coursera.org/account/accomplishments/verify/IPP6T58ZM2PC" },
+  { id: 5, image: "/courcera-certificats/javascript_cisco.png", link: "/courcera-certificats/javascript_cisco.png" },
 ];
 
 // Montre 3 sur la homepage
