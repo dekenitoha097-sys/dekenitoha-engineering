@@ -68,7 +68,7 @@ const cv = {
 
     "cv.languages.title": "Langues",
     "cv.languages.fr": "Français - langue maternelle",
-    "cv.languages.en": "Anglais - professionnel",
+    "cv.languages.en": "Anglais - intermédiaire",
 
     "cv.interests.title": "Centres d'intérêt",
     "cv.interests.list":
@@ -144,7 +144,7 @@ const cv = {
 
     "cv.languages.title": "Languages",
     "cv.languages.fr": "French - Native",
-    "cv.languages.en": "English - Professional",
+    "cv.languages.en": "English - Intermediate",
 
     "cv.interests.title": "Interests",
     "cv.interests.list":
