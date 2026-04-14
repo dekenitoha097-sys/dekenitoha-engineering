@@ -3,7 +3,19 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
-import { Award, ExternalLink, Lock, Eye, EyeOff, CheckCircle, Users, MousePointer, Activity, Globe, Calendar } from "lucide-react";
+import {
+  Award,
+  ExternalLink,
+  Lock,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  Users,
+  MousePointer,
+  Activity,
+  Globe,
+  Calendar,
+} from "lucide-react";
 import "./special-page.css";
 
 // Données des certificats
@@ -71,7 +83,7 @@ interface AnalyticsData {
 }
 
 export default function SpecialPage() {
-  const { t, locale } = useTranslation();
+  const { locale } = useTranslation();
   const [password, setPassword] = useState("");
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [showPassword, setShowPassword] = useState(false);

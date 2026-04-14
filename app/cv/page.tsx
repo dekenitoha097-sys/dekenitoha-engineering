@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Header from "@/components/Header";
 import { useTranslation } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/i18n/translations";
@@ -11,6 +11,10 @@ import {
   cvExperiencesByCategory,
   cvProjectsByCategory,
   cvSkillsByCategory,
+  cvHeaderByCategory,
+  cvProfileByCategory,
+  cvSoftSkillsByCategory,
+  cvInterestsByCategory,
   type CvCategory,
   type CvSkillGroupKey,
   type LocalizedList,
@@ -61,21 +65,14 @@ const spokenLanguages = [
   "cv.languages.en",
 ];
 
-const categoryOptions: { id: CvCategory; labelKey: string }[] = [
-  { id: "general", labelKey: "cv.category.general" },
-  { id: "web", labelKey: "cv.category.web" },
-  { id: "ai", labelKey: "cv.category.ai" },
-  { id: "games", labelKey: "cv.category.games" },
-];
-
-const skillGroupOrder: CvSkillGroupKey[] = ["languages", "frameworks", "databases", "tools", "ai"];
+const skillGroupOrder: CvSkillGroupKey[] = ["languages", "frameworks", "databases", "api", "tools", "other", "ai"];
 
 // =============================================
 
 export default function CVPage() {
   const { t, locale } = useTranslation();
   const cvRef = useRef<HTMLDivElement>(null);
-  const [activeCategory, setActiveCategory] = useState<CvCategory>("general");
+  const activeCategory: CvCategory = "general";
 
   const isFr = locale === "fr";
   const getText = (text: LocalizedText) => (isFr ? text.fr : text.en);
@@ -85,6 +82,10 @@ export default function CVPage() {
   const projects = cvProjectsByCategory[activeCategory];
   const skills = cvSkillsByCategory[activeCategory];
   const visibleSkillGroups = skillGroupOrder.filter((key) => skills[key]?.length > 0);
+  const headerOverride = cvHeaderByCategory[activeCategory];
+  const profileOverride = cvProfileByCategory[activeCategory];
+  const softSkillsOverride = cvSoftSkillsByCategory[activeCategory];
+  const interestsOverride = cvInterestsByCategory[activeCategory];
 
   const handleDownloadPDF = async () => {
     if (!cvRef.current) return;
@@ -123,7 +124,7 @@ export default function CVPage() {
     await html2pdf()
       .set({
         margin: 0,
-        filename: `CV_DEKENI_Toha_${activeCategory}.pdf`,
+        filename: "CV_DEKENI_Toha.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
@@ -166,23 +167,6 @@ export default function CVPage() {
                 {t("cv.print" as TranslationKey)}
               </button>
             </div>
-            <div className="cv-category-switch">
-              <span className="cv-category-label">
-                {t("cv.category.label" as TranslationKey)}
-              </span>
-              <div className="cv-category-buttons">
-                {categoryOptions.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    className={`cv-category-btn ${activeCategory === option.id ? "cv-category-btn--active" : ""}`}
-                    onClick={() => setActiveCategory(option.id)}
-                  >
-                    {t(option.labelKey as TranslationKey)}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
@@ -200,35 +184,39 @@ export default function CVPage() {
               />
             </div>
             <div className="cv-identity">
-              <h2 className="cv-name">{t("cv.name" as TranslationKey)}</h2>
-              <p className="cv-role">{t("cv.role" as TranslationKey)}</p>
+              <h2 className="cv-name">
+                {headerOverride.name ?? t("cv.name" as TranslationKey)}
+              </h2>
+              <p className="cv-role">
+                {headerOverride.role ? getText(headerOverride.role) : t("cv.role" as TranslationKey)}
+              </p>
             </div>
             <div className="cv-contact-info">
               <span className="cv-contact-item">
                 <MapPin size={14} />
-                {t("cv.location" as TranslationKey)}
+                {headerOverride.location ? getText(headerOverride.location) : t("cv.location" as TranslationKey)}
               </span>
               <span className="cv-contact-item">
                 <Mail size={14} />
-                {t("cv.email" as TranslationKey)}
+                {headerOverride.email ?? t("cv.email" as TranslationKey)}
               </span>
               <span className="cv-contact-item">
                 <Phone size={14} />
-                {t("cv.phone" as TranslationKey)}
+                {headerOverride.phone ?? t("cv.phone" as TranslationKey)}
               </span>
               <span className="cv-contact-item">
                 <Globe size={14} />
-                {personalInfo.portfolio}
+                {headerOverride.portfolio ?? personalInfo.portfolio}
               </span>
               <span className="cv-contact-item">
                 <Github size={14} />
-                <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" onClick={trackGithubVisit}>
-                  {personalInfo.github}
+                <a href={headerOverride.github ?? personalInfo.github} target="_blank" rel="noopener noreferrer" onClick={trackGithubVisit}>
+                  {headerOverride.github ?? personalInfo.github}
                 </a>
               </span>
               <span className="cv-contact-item">
                 <Linkedin size={14} />
-                {personalInfo.linkedin}
+                {headerOverride.linkedin ?? personalInfo.linkedin}
               </span>
             </div>
           </header>
@@ -242,7 +230,7 @@ export default function CVPage() {
                   {t("cv.profile.title" as TranslationKey)}
                 </h3>
                 <p className="cv-profile-text">
-                  {t("cv.profile.text" as TranslationKey)}
+                  {profileOverride ? getText(profileOverride) : t("cv.profile.text" as TranslationKey)}
                 </p>
               </section>
 
@@ -362,8 +350,7 @@ export default function CVPage() {
                   {t("cv.softskills.title" as TranslationKey)}
                 </h3>
                 <div className="cv-softskills-list">
-                  {t("cv.softskills.list" as TranslationKey)
-                    .split("|")
+                  {(softSkillsOverride ? getList(softSkillsOverride) : t("cv.softskills.list" as TranslationKey).split("|"))
                     .map((skill, idx) => (
                       <div key={idx} className="cv-softskill-item">
                         <span className="cv-softskill-bullet">•</span>
@@ -391,8 +378,7 @@ export default function CVPage() {
                   {t("cv.interests.title" as TranslationKey)}
                 </h3>
                 <div className="cv-interest-tags">
-                  {t("cv.interests.list" as TranslationKey)
-                    .split("|")
+                  {(interestsOverride ? getList(interestsOverride) : t("cv.interests.list" as TranslationKey).split("|"))
                     .map((interest, idx) => (
                       <span key={idx} className="cv-interest-tag">
                         {interest}

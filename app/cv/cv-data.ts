@@ -1,4 +1,4 @@
-export type CvCategory = "general" | "web" | "ai" | "games";
+export type CvCategory = "general" | "web" | "ai" | "games" | "nodejs";
 
 export type LocalizedText = {
   fr: string;
@@ -23,8 +23,30 @@ export interface CvProject {
   techs: string[];
 }
 
-export type CvSkillGroupKey = "languages" | "frameworks" | "databases" | "tools" | "ai";
+export type CvSkillGroupKey = "languages" | "frameworks" | "databases" | "api" | "tools" | "other" | "ai";
 export type CvSkillGroups = Record<CvSkillGroupKey, string[]>;
+
+export type CvHeaderOverride = Partial<{
+  name: string;
+  role: LocalizedText;
+  location: LocalizedText;
+  email: string;
+  phone: string;
+  portfolio: string;
+  github: string;
+  linkedin: string;
+}>;
+
+const ENABLE_CV_VARIANTS = true;
+const emptySkills: CvSkillGroups = {
+  languages: [],
+  frameworks: [],
+  databases: [],
+  api: [],
+  tools: [],
+  other: [],
+  ai: [],
+};
 
 const experienceWeb: CvExperience = {
   period: { fr: "2024 - Present", en: "2024 - Present" },
@@ -90,6 +112,28 @@ const experienceGames: CvExperience = {
       "C++ library for Raylib: sprites, animations, Box2D physics",
       "Strengthened algorithms and software architecture skills",
       "Reusable modular tools for 2D game development",
+    ],
+  },
+};
+
+const experienceNode: CvExperience = {
+  period: { fr: "2024 - Présent", en: "2024 - Present" },
+  role: { fr: "Développeur Web & Backend - Projets Personnels", en: "Web & Backend Developer - Personal Projects" },
+  company: { fr: "Casablanca, Maroc", en: "Casablanca, Morocco" },
+  tasks: {
+    fr: [
+      "Conception d'applications web full-stack avec Node.js, Express et bases SQL/NoSQL",
+      "Développement d'APIs RESTful sécurisées avec authentification JWT",
+      "Intégration front-end avec React/Next.js et optimisation UX",
+      "Modélisation et requêtes SQL/PostgreSQL/MySQL, gestion des relations et performances",
+      "Déploiement avec Docker, CI/CD sur Vercel et environnements de test",
+    ],
+    en: [
+      "Built full-stack web apps with Node.js, Express, and SQL/NoSQL databases",
+      "Developed secure RESTful APIs with JWT authentication",
+      "Front-end integration with React/Next.js and UX optimization",
+      "SQL/PostgreSQL/MySQL modeling, queries, and performance tuning",
+      "Deployment with Docker, CI/CD on Vercel, and test environments",
     ],
   },
 };
@@ -167,18 +211,55 @@ const aiProjects: CvProject[] = [
   },
 ];
 
+const nodeProjects: CvProject[] = [
+  {
+    title: { fr: "QuizHub", en: "QuizHub" },
+    description: {
+      fr: "Application de quiz avec API Node/Express, stockage des scores et classement en temps réel.",
+      en: "Quiz app with Node/Express API, score storage, and real-time leaderboard.",
+    },
+    techs: ["Node.js", "Express", "React", "TypeScript"],
+  },
+  {
+    title: { fr: "Dashboard Analytics", en: "Analytics Dashboard" },
+    description: {
+      fr: "Dashboard temps réel avec Node.js, D3.js et intégration React.",
+      en: "Real-time dashboard with Node.js, D3.js, and React integration.",
+    },
+    techs: ["Node.js", "D3.js", "React"],
+  },
+  {
+    title: { fr: "Plateforme E-Commerce", en: "E-Commerce Platform" },
+    description: {
+      fr: "Catalogue, panier et authentification avec Next.js, Node.js et bases SQL.",
+      en: "Catalog, cart, and authentication with Next.js, Node.js, and SQL databases.",
+    },
+    techs: ["Next.js", "Node.js", "TypeScript", "PostgreSQL"],
+  },
+  {
+    title: { fr: "Portfolio Personnel", en: "Personal Portfolio" },
+    description: {
+      fr: "Site Next.js bilingue avec génération PDF du CV et design glassmorphism.",
+      en: "Bilingual Next.js site with CV PDF generation and glassmorphism design.",
+    },
+    techs: ["Next.js", "TypeScript", "CSS"],
+  },
+];
+
 export const cvExperiencesByCategory: Record<CvCategory, CvExperience[]> = {
   general: [experienceWeb, experienceAcademic, experienceGames],
-  web: [experienceWeb],
-  ai: [experienceAcademic],
-  games: [experienceGames],
+  web: ENABLE_CV_VARIANTS ? [experienceWeb] : [],
+  ai: ENABLE_CV_VARIANTS ? [experienceAcademic] : [],
+  games: ENABLE_CV_VARIANTS ? [experienceGames] : [],
+  nodejs: ENABLE_CV_VARIANTS ? [experienceNode] : [],
 };
 
 export const cvProjectsByCategory: Record<CvCategory, CvProject[]> = {
   general: [...webProjects, ...gameProjects],
-  web: webProjects,
-  ai: aiProjects,
-  games: gameProjects,
+  web: ENABLE_CV_VARIANTS ? webProjects : [],
+  ai: ENABLE_CV_VARIANTS ? aiProjects : [],
+  games: ENABLE_CV_VARIANTS ? gameProjects : [],
+  nodejs: ENABLE_CV_VARIANTS ? nodeProjects : [],
 };
 
 export const cvSkillsByCategory: Record<CvCategory, CvSkillGroups> = {
@@ -186,28 +267,125 @@ export const cvSkillsByCategory: Record<CvCategory, CvSkillGroups> = {
     languages: ["C", "C++", "Python", "TypeScript", "JavaScript", "Rust", "SQL", "java"],
     frameworks: ["React", "Next.js", "Node.js", "Tailwind CSS", "Framer Motion", "Prisma"],
     databases: ["PostgreSQL", "SQL", "Mysql"],
+    api: [],
     tools: ["Git", "Docker", "Linux", "VS Code", "Figma"],
+    other: [],
     ai: ["Machine Learning (scikit-learn)", "Analyse de donnees (pandas, numpy, seaborn)", "Mathematiques symboliques (sympy)"],
   },
-  web: {
-    languages: ["TypeScript", "JavaScript", "HTML", "CSS"],
-    frameworks: ["React", "Next.js", "Node.js", "Express", "Tailwind CSS"],
-    databases: ["PostgreSQL", "MySQL", "Prisma"],
-    tools: ["Git", "Docker", "Vercel", "Figma"],
-    ai: [],
-  },
-  ai: {
-    languages: ["Python"],
-    frameworks: ["PyTorch", "TensorFlow", "scikit-learn"],
-    databases: ["SQLite3", "PostgreSQL"],
-    tools: ["Jupyter", "Git", "Docker"],
-    ai: ["Computer Vision", "NLP", "Model evaluation"],
-  },
-  games: {
-    languages: ["C++", "Python"],
-    frameworks: ["Raylib"],
-    databases: [],
-    tools: ["Git", "CMake", "Visual Studio"],
-    ai: [],
-  },
+  web: ENABLE_CV_VARIANTS
+    ? {
+        languages: ["TypeScript", "JavaScript", "HTML", "CSS"],
+        frameworks: ["React", "Next.js", "Node.js", "Express", "Tailwind CSS"],
+        databases: ["PostgreSQL", "MySQL", "Prisma"],
+        api: [],
+        tools: ["Git", "Docker", "Vercel", "Figma"],
+        other: [],
+        ai: [],
+      }
+    : emptySkills,
+  ai: ENABLE_CV_VARIANTS
+    ? {
+        languages: ["Python"],
+        frameworks: ["PyTorch", "TensorFlow", "scikit-learn"],
+        databases: ["SQLite3", "PostgreSQL"],
+        api: [],
+        tools: ["Jupyter", "Git", "Docker"],
+        other: [],
+        ai: ["Computer Vision", "NLP", "Model evaluation"],
+      }
+    : emptySkills,
+  games: ENABLE_CV_VARIANTS
+    ? {
+        languages: ["C++", "Python"],
+        frameworks: ["Raylib"],
+        databases: [],
+        api: [],
+        tools: ["Git", "CMake", "Visual Studio"],
+        other: [],
+        ai: [],
+      }
+    : emptySkills,
+  nodejs: ENABLE_CV_VARIANTS
+    ? {
+        languages: ["Node.js", "TypeScript", "JavaScript", "Python", "C/C++"],
+        frameworks: ["Express.js", "React", "Next.js", "Tailwind CSS"],
+        databases: ["PostgreSQL", "MySQL", "Prisma"],
+        api: ["REST", "JSON", "JWT", "OAuth"],
+        tools: ["Docker", "Git", "CI/CD", "Vercel"],
+        other: ["Figma", "Modélisation 3D"],
+        ai: [],
+      }
+    : emptySkills,
+};
+
+export const cvProfileByCategory: Record<CvCategory, LocalizedText | null> = {
+  general: null,
+  web: null,
+  ai: null,
+  games: null,
+  nodejs: ENABLE_CV_VARIANTS
+    ? {
+        fr: "Étudiant en 2e année d'ingénierie informatique et IA, passionné par le développement backend, Node.js et les architectures scalables. Expérience dans la conception d'APIs RESTful, l'intégration de bases SQL/NoSQL et le déploiement d'applications web. Autonome, rigoureux et orienté résolution de problèmes, je cherche à contribuer à des projets innovants dans un environnement Agile.",
+        en: "Computer science and AI engineering student focused on Node.js backend and scalable architectures. Experience designing RESTful APIs, integrating SQL/NoSQL databases, and deploying web applications. Autonomous, rigorous, and problem-solving oriented, I aim to contribute to innovative projects in an Agile environment.",
+      }
+    : null,
+};
+
+export const cvHeaderByCategory: Record<CvCategory, CvHeaderOverride> = {
+  general: {},
+  web: {},
+  ai: {},
+  games: {},
+  nodejs: ENABLE_CV_VARIANTS
+    ? {
+        role: { fr: "Développeur Node.js / Backend", en: "Node.js / Backend Developer" },
+        phone: "+212 681870979",
+      }
+    : {},
+};
+
+export const cvSoftSkillsByCategory: Record<CvCategory, LocalizedList | null> = {
+  general: null,
+  web: null,
+  ai: null,
+  games: null,
+  nodejs: ENABLE_CV_VARIANTS
+    ? {
+        fr: [
+          "Travail en équipe & communication",
+          "Résolution de problèmes techniques",
+          "Autonomie et apprentissage rapide",
+          "Gestion de projets et veille technologique",
+        ],
+        en: [
+          "Teamwork & communication",
+          "Technical problem solving",
+          "Autonomy and fast learning",
+          "Project management and tech watch",
+        ],
+      }
+    : null,
+};
+
+export const cvInterestsByCategory: Record<CvCategory, LocalizedList | null> = {
+  general: null,
+  web: null,
+  ai: null,
+  games: null,
+  nodejs: ENABLE_CV_VARIANTS
+    ? {
+        fr: [
+          "Cybersécurité et IA",
+          "Open source et communautés dev",
+          "Design UI/UX et innovation technologique",
+          "Dessin et modélisation 3D",
+        ],
+        en: [
+          "Cybersecurity and AI",
+          "Open source and dev communities",
+          "UI/UX design and tech innovation",
+          "Drawing and 3D modeling",
+        ],
+      }
+    : null,
 };
