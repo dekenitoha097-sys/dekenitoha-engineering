@@ -128,7 +128,9 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
       </header>
 
       <div className="cv-doc-body">
-        <div className="cv-main">
+        {/* === LEFT SIDEBAR === */}
+        <aside className="cv-sidebar">
+          {/* Profile Section */}
           <section className="cv-section">
             <h3 className="cv-section-title">
               {t("cv.profile.title" as TranslationKey)}
@@ -138,6 +140,70 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
             </p>
           </section>
 
+          {/* Education Section */}
+          <section className="cv-section">
+            <h3 className="cv-section-title">
+              {t("cv.education.title" as TranslationKey)}
+            </h3>
+            {educations.map((edu, i) => (
+              <div key={i} className="cv-entry">
+                <div className="cv-entry-header">
+                  <div>
+                    <h4 className="cv-entry-title">
+                      {t(edu.degreeKey as TranslationKey)}
+                    </h4>
+                    <span className="cv-entry-org">
+                      {t(edu.schoolKey as TranslationKey)}
+                    </span>
+                  </div>
+                  <span className="cv-entry-period">
+                    {t(edu.periodKey as TranslationKey)}
+                  </span>
+                </div>
+                <p className="cv-entry-desc">
+                  {t(edu.descKey as TranslationKey)}
+                </p>
+              </div>
+            ))}
+          </section>
+
+          {/* Skills Section */}
+          <section className="cv-section">
+            <h3 className="cv-section-title">
+              {t("cv.skills.title" as TranslationKey)}
+            </h3>
+            {visibleSkillGroups.map((key) => (
+              <div key={key} className="cv-skill-group">
+                <h4 className="cv-skill-group-title">
+                  {t(`cv.skills.${key}` as TranslationKey)}
+                </h4>
+                <div className="cv-skill-tags">
+                  {skills[key].map((tech) => (
+                    <span key={tech} className="cv-skill-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+
+          {/* Languages Section */}
+          <section className="cv-section">
+            <h3 className="cv-section-title">
+              {t("cv.languages.title" as TranslationKey)}
+            </h3>
+            <ul className="cv-lang-list">
+              {["cv.languages.fr", "cv.languages.en"].map((langKey) => (
+                <li key={langKey}>{t(langKey as TranslationKey)}</li>
+              ))}
+            </ul>
+          </section>
+        </aside>
+
+        {/* === RIGHT MAIN COLUMN === */}
+        <div className="cv-main">
+          {/* Experience Section */}
           <section className="cv-section">
             <h3 className="cv-section-title">
               {t("cv.experience.title" as TranslationKey)}
@@ -166,6 +232,7 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
             ))}
           </section>
 
+          {/* Projects Section */}
           {projects.length > 0 && (
             <section className="cv-section">
               <h3 className="cv-section-title">
@@ -195,54 +262,7 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
             </section>
           )}
 
-          <section className="cv-section">
-            <h3 className="cv-section-title">
-              {t("cv.education.title" as TranslationKey)}
-            </h3>
-            {educations.map((edu, i) => (
-              <div key={i} className="cv-entry">
-                <div className="cv-entry-header">
-                  <div>
-                    <h4 className="cv-entry-title">
-                      {t(edu.degreeKey as TranslationKey)}
-                    </h4>
-                    <span className="cv-entry-org">
-                      {t(edu.schoolKey as TranslationKey)}
-                    </span>
-                  </div>
-                  <span className="cv-entry-period">
-                    {t(edu.periodKey as TranslationKey)}
-                  </span>
-                </div>
-                <p className="cv-entry-desc">
-                  {t(edu.descKey as TranslationKey)}
-                </p>
-              </div>
-            ))}
-          </section>
-        </div>
-
-        <aside className="cv-sidebar">
-          <section className="cv-section">
-            <h3 className="cv-section-title">
-              {t("cv.skills.title" as TranslationKey)}
-            </h3>
-            {visibleSkillGroups.map((key) => (
-              <div key={key} className="cv-skill-group">
-                <h4 className="cv-skill-group-title">
-                  {t(`cv.skills.${key}` as TranslationKey)}
-                </h4>
-                <div className="cv-skill-tags">
-                  {skills[key].map((tech) => (
-                    <span key={tech} className="cv-skill-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </section>
-
+          {/* Soft Skills Section */}
           <section className="cv-section">
             <h3 className="cv-section-title">
               {t("cv.softskills.title" as TranslationKey)}
@@ -258,17 +278,7 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
             </div>
           </section>
 
-          <section className="cv-section">
-            <h3 className="cv-section-title">
-              {t("cv.languages.title" as TranslationKey)}
-            </h3>
-            <ul className="cv-lang-list">
-              {["cv.languages.fr", "cv.languages.en"].map((langKey) => (
-                <li key={langKey}>{t(langKey as TranslationKey)}</li>
-              ))}
-            </ul>
-          </section>
-
+          {/* Interests Section */}
           <section className="cv-section">
             <h3 className="cv-section-title">
               {t("cv.interests.title" as TranslationKey)}
@@ -282,7 +292,7 @@ export default function CVDocument({ category, cvRef }: CVDocumentProps) {
                 ))}
             </div>
           </section>
-        </aside>
+        </div>
       </div>
     </div>
   );

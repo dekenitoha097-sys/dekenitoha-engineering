@@ -102,116 +102,176 @@
   animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
 }
 
-/* --- Doc Header --- */
+/* --- Doc Header - Horizontal Layout --- */
 .cv-doc-header {
-  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
-  border-radius: 24px;
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2.5rem;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
 }
 
 .cv-photo {
   flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 112, 243, 0.25);
+  transition: all 0.3s ease;
+}
+
+.cv-photo:hover {
+  box-shadow: 0 12px 28px rgba(0, 112, 243, 0.4);
+  transform: translateY(-2px);
 }
 
 .cv-photo-img {
-  width: 180px;
-  height: 200px;
-  border-radius: 14px;
+  width: 150px;
+  height: 170px;
+  border-radius: 12px;
   object-fit: cover;
   object-position: center 20%;
-  border: 3px solid var(--accent, #0070f3);
-  box-shadow: 0 0 20px rgba(0, 112, 243, 0.2);
+  border: 2px solid rgba(0, 112, 243, 0.4);
+  display: block;
 }
 
-.cv-identity {}
+.cv-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+}
 
 .cv-name {
   font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text-main, #000000);
-  margin-bottom: 0.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-main, #ffffff);
+  line-height: 1.1;
+  margin: 0;
 }
 
 .cv-role {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: var(--accent, #60a5fa);
   font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0;
 }
 
 .cv-contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .cv-contact-item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.5rem;
   color: var(--text-muted, #888);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  transition: all 0.2s ease;
+}
+
+.cv-contact-item:hover {
+  color: var(--accent, #60a5fa);
 }
 
 .cv-contact-item svg {
   color: var(--accent, #60a5fa);
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  order: 1;
 }
 
-/* --- Doc Body --- */
+/* --- Doc Body - 2 Columns Layout --- */
 .cv-doc-body {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Left Sidebar - Narrow Column */
+.cv-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: fit-content;
+}
+
+/* Right Main - Wide Column */
+.cv-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 /* --- Section --- */
 .cv-section {
-  background: var(--glass-bg, rgba(255, 255, 255, 0.03));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
-  border-radius: 20px;
-  padding: 1.75rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 2rem 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  transition: all 0.3s ease;
+}
+
+.cv-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cv-sidebar .cv-section {
+  background: rgba(0, 112, 243, 0.04);
+  border: 1px solid rgba(0, 112, 243, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0, 112, 243, 0.1);
+}
+
+.cv-sidebar .cv-section:last-child {
+  border-bottom: 1px solid rgba(0, 112, 243, 0.1);
 }
 
 .cv-section:hover {
   background: var(--glass-hover, rgba(255, 255, 255, 0.05));
-  border-color: rgba(96, 165, 250, 0.2);
 }
 
 .cv-section-title {
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 0.85rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   color: var(--accent, #60a5fa);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--accent, #60a5fa);
 }
 
 /* --- Profile --- */
 .cv-profile-text {
   color: var(--text-muted, #888);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 /* --- Entry (Experience / Education) --- */
 .cv-entry {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .cv-entry:last-child {
@@ -223,7 +283,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .cv-entry-title {
@@ -500,16 +560,18 @@
   }
 
   .cv-doc-header {
-    padding: 1.25rem;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
   }
 
   .cv-photo-img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 150px;
   }
 
   .cv-name {
-    font-size: 1.35rem;
+    font-size: 1.6rem;
   }
 
   .cv-role {
@@ -517,25 +579,38 @@
   }
 
   .cv-contact-info {
-    flex-direction: column;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .cv-contact-item {
+    justify-content: flex-start;
+    font-size: 0.75rem;
+  }
+
+  .cv-contact-item svg {
+    order: 0;
+  }
+
+  .cv-doc-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cv-sidebar {
+    gap: 1.5rem;
   }
 
   .cv-section {
-    padding: 1rem;
-    margin-bottom: 0.75rem;
+    padding: 0 0 1.5rem 0;
   }
 
-  .cv-section-title {
-    font-size: 0.95rem;
+  .cv-sidebar .cv-section {
+    padding: 1.25rem;
   }
 
-  .cv-entry-title {
-    font-size: 0.9rem;
-  }
-
-  .cv-entry-tasks li {
-    font-size: 0.8rem;
+  .cv-entry {
+    margin-bottom: 1.2rem;
   }
 }
 

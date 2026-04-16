@@ -4,7 +4,7 @@ const about = {
     "about.title.line1": "Qui suis-je",
     "about.title.highlight": "?",
     "about.description":
-      "Etudiant en 2e année d'Ingénierie Informatique spécialisé en cybersécurité, je me concentre sur le pentest, l'exploitation responsable et la sécurisation d'infrastructure. Autonome, rigoureux et passionné par la sécurité offensive et défensive.",
+      "Étudiant en 2e année de classe préparatoire d'ingénierie informatique. Orientation future: cybersécurité et pentest. J'ai une pratique active en Burp Suite, Metasploit, Nmap et CTF challenges. Autonome, rigoureux et passionné par la sécurité.",
     "about.stat.projects": "Projets Cyber",
     "about.stat.projects.value": "5+",
     "about.stat.experience": "Annees d'etudes",
@@ -23,20 +23,20 @@ const about = {
     "about.seeMore": "En savoir plus",
 
     "aboutPage.hero.eyebrow": "A PROPOS DE MOI",
-    "aboutPage.hero.title": "Etudiant en 2e année d'Ingénierie Informatique ",
-    "aboutPage.hero.titleHighlight": " spécialisé en Cybersécurité",
+    "aboutPage.hero.title": "Etudiant en 2e année - Classe Préparatoire",
+    "aboutPage.hero.titleHighlight": " Cybersécurité (Orientation future)",
     "aboutPage.hero.bio":
-      "Je suis DEKENI Toha, étudiant à HESTIM Casablanca. Mon objectif est de maîtriser la sécurité offensive, devenir expert en tests de pénétration et contribuer à la sécurisation d'infrastructures critiques.",
+      "Je suis DEKENI Toha, étudiant en 2e année à HESTIM Casablanca. Je m'oriente vers la cybersécurité et le pentest. Mon objectif: approfondir la sécurité offensive, pratiquer les outils professionnels et contribuer à des projets de sécurité.",
     "aboutPage.hero.location": "Base a Casablanca, Maroc",
-    "aboutPage.hero.status": "Ouvert aux stages en cybersécurité et pentest",
+    "aboutPage.hero.status": "À la recherche de stage/alternance en cybersécurité",
 
     "aboutPage.timeline.eyebrow": "PARCOURS ACADEMIQUE",
     "aboutPage.timeline.title": "Mon",
     "aboutPage.timeline.titleHighlight": "Parcours",
     "aboutPage.timeline.1.year": "2025 - 2026 (En cours)",
-    "aboutPage.timeline.1.title": "2e Annee - Informatique & Cybersécurité",
+    "aboutPage.timeline.1.title": "2e Année - Classe Préparatoire Informatique",
     "aboutPage.timeline.1.description":
-      "HESTIM Casablanca: Sécurité informatique, Réseaux avancés, Architecture des ordinateurs et intégration de connaisances en pentest & sécurité offensive.",
+      "HESTIM Casablanca: Sécurité informatique, Réseaux avancés, Architecture. Pratique personnelle en pentest, Burp Suite, Metasploit, Nmap et CTF challenges.",
     "aboutPage.timeline.2.year": "2024 - 2025",
     "aboutPage.timeline.2.title": "1ere Annee - Informatique",
     "aboutPage.timeline.2.description":

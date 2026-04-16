@@ -22,9 +22,10 @@ export default function SpecialCvPage() {
   const [activeCvCategory, setActiveCvCategory] = useState<CvCategory>("general");
   const cvRef = useRef<HTMLDivElement>(null);
 
-  const cvCategories: CvCategory[] = ["general", "web", "ai", "games", "nodejs"];
+  const cvCategories: CvCategory[] = ["general", "cyber", "web", "ai", "games", "nodejs"];
   const cvCategoryLabels: Record<CvCategory, TranslationKey> = {
     general: "cv.category.general",
+    cyber: "cv.category.cyber",
     web: "cv.category.web",
     ai: "cv.category.ai",
     games: "cv.category.games",
@@ -182,7 +183,7 @@ export default function SpecialCvPage() {
             </div>
           </section>
 
-          <CVDocument category={activeCvCategory} cvRef={cvRef} />
+          <CVDocument category={activeCvCategory} cvRef={cvRef as React.RefObject<HTMLDivElement>} />
         </div>
       )}
     </main>

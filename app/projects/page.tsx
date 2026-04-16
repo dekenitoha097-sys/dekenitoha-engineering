@@ -15,7 +15,7 @@ import "./projects-page.css";
 // =============================================
 
 // Types
-type DomainFilter = "all" | "web" | "ai" | "tools" | "academic" | "games";
+type DomainFilter = "all" | "cybersecurity" | "web" | "ai" | "tools" | "academic" | "games";
 type LangFilter = "all" | "typescript" | "python" | "rust" | "cpp" | "javascript";
 
 interface Project {
@@ -41,8 +41,7 @@ interface Project {
 }
 
 // ðŸŽ¨ Couleurs par domaine
-const domainColors: Record<string, string> = {
-  web: "from-blue-accent",
+const domainColors: Record<string, string> = {  cybersecurity: "from-red-accent",  web: "from-blue-accent",
   ai: "from-purple-accent",
   tools: "from-orange-accent",
   academic: "from-green-accent",
@@ -51,8 +50,142 @@ const domainColors: Record<string, string> = {
 
 // Liste des projets â€” AJOUTE DES OBJETS ICI POUR AJOUTER DES PROJETS
 const projectsList: Project[] = [
+  {    id: "metasploitable-pentest",
+    titleFr: "Exploitation Metasploitable – Pentest Complet",
+    titleEn: "Metasploitable Exploitation – Full Pentest",
+    descFr:
+      "Pentest d'une infrastructure complète incluant énumération de services (SSH, FTP, Samba), exploitation de vulnérabilités avec Metasploit, escalade de privilèges et lateral movement. Documentation attaque/défense complète.",
+    descEn:
+      "Full infrastructure pentest including service enumeration (SSH, FTP, Samba), vulnerability exploitation with Metasploit, privilege escalation and lateral movement. Complete attack/defense documentation.",
+    domain: "cybersecurity",
+    lang: "python",
+    techs: ["Metasploitable", "Nmap", "Metasploit", "Hydra", "Linux"],
+    github: "",
+    demo: "",
+    featured: true,
+    year: 2025,
+    color: "#ef4444",
+    images: ["https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop"],
+    featuresFr: [
+      "Énumération complète des services réseau",
+      "Exploitation de vulnérabilités avec Metasploit",
+      "Escalade de privilèges réussie",
+      "Lateral movement dans l'infrastructure",
+      "Documentation attaque/défense détaillée"
+    ],
+    featuresEn: [
+      "Complete network service enumeration",
+      "Vulnerability exploitation with Metasploit",
+      "Successful privilege escalation",
+      "Lateral movement across infrastructure",
+      "Detailed attack/defense documentation"
+    ],
+    resultsFr: ["Accès root obtenu", "Infrastructure compromise", "Documentation complète"],
+    resultsEn: ["Root access obtained", "Infrastructure compromised", "Full documentation"]
+  },
   {
-    id: "portfolio",
+    id: "burp-web-pentest",
+    titleFr: "Pentest Web – Burp Suite",
+    titleEn: "Web Pentest – Burp Suite",
+    descFr:
+      "Tests de sécurité web basés sur OWASP Top 10 : XSS (Reflected, Stored, DOM), SQL Injection, CSRF, XXE, SSRF, authentication bypass et fuzzing avec exploitation chaînée. Rapport technique complet.",
+    descEn:
+      "Web security testing based on OWASP Top 10: XSS (Reflected, Stored, DOM), SQL Injection, CSRF, XXE, SSRF, authentication bypass and chained exploitation. Complete technical report.",
+    domain: "cybersecurity",
+    lang: "javascript",
+    techs: ["Burp Suite", "HTTP/HTTPS", "SQL", "JavaScript", "OWASP"],
+    github: "",
+    demo: "",
+    featured: true,
+    year: 2025,
+    color: "#ef4444",
+    images: ["https://images.unsplash.com/photo-1516321318423-f06f70a504f9?w=800&h=600&fit=crop"],
+    featuresFr: [
+      "Injection SQL avancée",
+      "XSS Stored et Reflected",
+      "CSRF et XXE exploitation",
+      "Authentication bypass techniques",
+      "Exploitation chaînée de vulnérabilités"
+    ],
+    featuresEn: [
+      "Advanced SQL Injection",
+      "XSS Stored and Reflected",
+      "CSRF and XXE exploitation",
+      "Authentication bypass techniques",
+      "Chained vulnerability exploitation"
+    ],
+    resultsFr: ["Multiples vulnérabilités trouvées", "Rapport OWASP complet", "Recommandations sécurité"],
+    resultsEn: ["Multiple vulnerabilities found", "Complete OWASP report", "Security recommendations"]
+  },
+  {
+    id: "nginx-hardening",
+    titleFr: "Sécurisation Serveur Nginx/Apache2",
+    titleEn: "Nginx/Apache2 Server Hardening",
+    descFr:
+      "Hardening serveur en environnement de production : configuration SSL/TLS, gestion SSH sécurisée, firewall (iptables), WAF et fail2ban, monitoring et logs. Sécurité complète du serveur.",
+    descEn:
+      "Production server hardening: SSL/TLS configuration, secure SSH management, firewall (iptables), WAF and fail2ban, monitoring and logs. Complete server security.",
+    domain: "cybersecurity",
+    lang: "python",
+    techs: ["Nginx", "Apache2", "SSL/TLS", "iptables", "fail2ban", "Linux"],
+    github: "",
+    demo: "",
+    featured: true,
+    year: 2025,
+    color: "#ef4444",
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"],
+    featuresFr: [
+      "Configuration SSL/TLS robuste",
+      "SSH fort et key-based authentication",
+      "Firewall iptables optimisé",
+      "WAF et fail2ban configurés",
+      "Monitoring et alertes de sécurité"
+    ],
+    featuresEn: [
+      "Robust SSL/TLS configuration",
+      "Strong SSH and key-based auth",
+      "Optimized iptables firewall",
+      "WAF and fail2ban configured",
+      "Security monitoring and alerts"
+    ],
+    resultsFr: ["Serveur sécurisé", "Zéro intrusion", "Compliance OWASP"],
+    resultsEn: ["Secured server", "Zero intrusions", "OWASP compliance"]
+  },
+  {
+    id: "ctf-challenges",
+    titleFr: "Résolution CTF – TryHackMe & picoCTF",
+    titleEn: "CTF Challenges – TryHackMe & picoCTF",
+    descFr:
+      "Résolution de challenges en cybersécurité : énumération, exploitation, escalade de privilèges, reverse engineering, cryptographie et forensique. Plus de 50 challenges complétés avec documentation complète.",
+    descEn:
+      "Cybersecurity challenge resolution: enumeration, exploitation, privilege escalation, reverse engineering, cryptography and forensics. 50+ challenges completed with complete documentation.",
+    domain: "cybersecurity",
+    lang: "cpp",
+    techs: ["TryHackMe", "picoCTF", "Linux", "Reverse Engineering", "Cryptography"],
+    github: "",
+    demo: "",
+    featured: true,
+    year: 2025,
+    color: "#ef4444",
+    images: ["https://images.unsplash.com/photo-1516321318423-f06f70a504f9?w=800&h=600&fit=crop"],
+    featuresFr: [
+      "Énumération avancée des systèmes",
+      "Exploitation et escalade de privilèges",
+      "Reverse engineering de binaires",
+      "Cryptographie et décryptage",
+      "Forensique et analyse de logs"
+    ],
+    featuresEn: [
+      "Advanced system enumeration",
+      "Exploitation and privilege escalation",
+      "Binary reverse engineering",
+      "Cryptography and decryption",
+      "Forensics and log analysis"
+    ],
+    resultsFr: ["50+ challenges résolus", "Certifications TryHackMe", "Compétences évaluées"],
+    resultsEn: ["50+ challenges solved", "TryHackMe certificates", "Verified skills"]
+  },
+  {    id: "portfolio",
     titleFr: "Portfolio Personnel",
     titleEn: "Personal Portfolio",
     descFr:
@@ -326,7 +459,7 @@ const projectsList: Project[] = [
 ];
 
 // Filtres disponibles
-const domainFilters: DomainFilter[] = ["all", "web", "ai", "tools", "academic", "games"];
+const domainFilters: DomainFilter[] = ["all", "cybersecurity", "web", "ai", "tools", "academic", "games"];
 const langFilters: LangFilter[] = ["all", "typescript", "python", "rust", "cpp", "javascript"];
 
 // =============================================

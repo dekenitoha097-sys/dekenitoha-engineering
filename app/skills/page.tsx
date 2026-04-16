@@ -60,6 +60,28 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    key: "cybersecurity",
+    titleKey: "skillsPage.cybersecurity.title",
+    skills: [
+      { name: "Burp Suite", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.burp.desc" },
+      { name: "Metasploit", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.metasploit.desc" },
+      { name: "Nmap", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.cybersecurity.nmap.desc" },
+      { name: "Wireshark", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.wireshark.desc" },
+      { name: "Gobuster", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.gobuster.desc" },
+      { name: "Hydra", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.hydra.desc" },
+      { name: "sqlmap", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.sqlmap.desc" },
+      { name: "john the Ripper", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.john.desc" },
+      { name: "hashcat", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.hashcat.desc" },
+      { name: "CyberChef", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.cyberchef.desc" },
+      { name: "Reverse Engineering", icon: "devicon-github-plain", level: "beginner", descKey: "skillsPage.cybersecurity.reverse.desc" },
+      { name: "OWASP Top 10", icon: "devicon-github-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.owasp.desc" },
+      { name: "SSH", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.cybersecurity.ssh.desc" },
+      { name: "HTTP/HTTPS", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.cybersecurity.http.desc" },
+      { name: "TCP/IP", icon: "devicon-github-plain", level: "advanced", descKey: "skillsPage.cybersecurity.tcpip.desc" },
+      { name: "Kali Linux", icon: "devicon-linux-plain", level: "intermediate", descKey: "skillsPage.cybersecurity.kali.desc" },
+    ],
+  },
+  {
     key: "db",
     titleKey: "skillsPage.db.title",
     skills: [
